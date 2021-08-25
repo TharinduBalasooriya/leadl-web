@@ -1,0 +1,71 @@
+<app-sign-out></app-sign-out>
+<div>
+  <div class="container-fluid">
+    <div class="row container-main">
+      <div class="col-md-2">
+        <app-nav-bar></app-nav-bar>
+      </div>
+
+      <div class="col-md-10 main">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink="/home"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink="/logs"> Projects</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink=""> Logs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Result</li>
+          </ol>
+        </nav>
+
+        <div class = "scriptViwerHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+             <h5> Result</h5>
+            </div>
+           
+            <div class="col-sm">
+
+              <div
+                  class="btn-group me-2"
+                  role="group"
+                  aria-label="First group"
+                  id ="btnGroup"
+                >
+                 
+                  <button
+                    type="button"
+                    id="viewResult"
+                    class="btn btn-outline-secondary"
+                    routerLink="/displayResult/{{ fileId }}"
+                  >
+                    Text
+                  </button>
+                  <button
+                    type="button"
+                    id="viewResult"
+                    class="btn btn-outline-secondary"
+                    routerLink="/displayJsonResult/{{ fileId }}"
+                  >
+                   JSON
+                  </button>
+                </div>
+            
+            </div>
+            
+          </div>
+          
+
+          </div>
+          <div class="jsonViwer">
+            <div class="form-groupshowcript">
+              <ngx-json-viewer [json]="data"></ngx-json-viewer>
+            </div>
+          </div>
+  </div>
+</div>

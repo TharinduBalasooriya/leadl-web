@@ -1,0 +1,99 @@
+<app-sign-out></app-sign-out>
+<div>
+  <div class="container-fluid">
+    <div class="row container-main">
+      <div class="col-md-2">
+        <app-nav-bar></app-nav-bar>
+      </div>
+
+      <div class="col-md-10 main">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" href="#"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" href="#"> Projects</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Create project
+            </li>
+          </ol>
+        </nav>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 ">
+            
+            </div>
+            <div class="col-6">
+              <div class="form">
+                <form class="add-form">
+                  <div class="loginheading"><h5>Create Project</h5></div>
+                  <div>
+                    <label class="form-label">Project Name</label>
+                    <input
+                      type="text"
+                      name="projectName"
+                      [(ngModel)]="projectname"
+                      required
+                      placeholder="Enter Project Name"
+                      class="form-control"
+                    />
+                  </div>
+      
+                  <div>
+                    <label class="form-label">Retention setting</label>
+                    <select
+                      class="form-control"
+                      id="exampleFormControlSelect1"
+                      name="expiredate"
+                      [(ngModel)]="expiredate"
+                    >
+                      <option Value="Never expire" name="Never expire">
+                        Never expire
+                      </option>
+                      <option value="1 day">1 day</option>
+                      <option value="5 days">5 days</option>
+                      <option value="1 week">1 week</option>
+                      <option value="1 month">1 month</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label">Create Date</label>
+                    <input
+                      name="createdate"
+                      [(ngModel)]="createdate"
+                      required
+                      placeholder="Enter your password"
+                      class="form-control"
+                    />
+                  </div>
+      
+                  <div class="btn-toolbar" style="padding-left: 40px">
+                    <p class="error"></p>
+                    <button
+                      (click)="createProject()"
+                      class="btn btn-primary btn-block1"
+                      type="button"
+                      routerLink="/logs"
+                    >
+                      Create</button
+                    ><button class="btn btn-primary btn-block2" type="button">
+                      Clear
+                    </button>
+                  </div>
+                </form>
+            </div>
+            <div class="col-md-2">
+           
+            </div>
+          </div>
+
+
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

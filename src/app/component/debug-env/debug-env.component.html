@@ -1,0 +1,104 @@
+<app-sign-out></app-sign-out>
+<div>
+  <div class="container-fluid">
+    <div class="row container-main">
+      <div class="col-md-2">
+        <app-nav-bar></app-nav-bar>
+      </div>
+
+      <div class="col-md-10 main">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink="/home"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink="/logs"> Projects</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" routerLink="/logList/{{ projectId }}">
+                Logs</a
+              >
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">PlayLDEL</li>
+          </ol>
+        </nav>
+
+        <div class="container wrapper playground-container">
+          <div class="row align-items-start">
+
+
+            <div class="col"> <h4 class="playgroudtxt">LeadL Playground</h4></div>
+
+            <div class="col">
+              <div class="row buttonSection ">
+                  <button
+                    type="button"
+                    class="btn btn-secondary runbutton"
+                    (click)="onExecute()">
+                   <span class ="run-btn-contain">
+                      <mat-icon>
+                     play_arrow
+                   </mat-icon>
+                    Run
+                   </span>
+                  </button>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="playground">
+             <div class="playground-logfile">
+             <app-resizable-div>
+                <app-file-upload
+                class="file-upload"
+                (filesChanged)="setFileList($event)"
+              >
+              <div>
+                {{ fileList1 | json }}
+              </div>
+              <textarea
+              [(ngModel)]="logFile"
+              class="form-control logFileContainer"
+              rows="3"
+              value="{{ textVal }}"
+            ></textarea>
+              </app-file-upload>
+             </app-resizable-div>
+              </div>
+              <div>
+             <app-resizable-div>
+               <div class ="editor">
+                 <ace-editor
+                   #editor style="height:100%;" [theme]="'dracula'">
+                 </ace-editor>
+               </div>
+             </app-resizable-div>
+
+             <app-resizable-div>
+               <div class="result-container">
+                 <div
+                   class="d-flex justify-content-center mt-5 loadingSpinner"
+                   *ngIf="resultPending; else elseBlock"
+                 >
+                   <div class="spinner-border" role="status"></div>
+                 </div>
+                 <ng-template #elseBlock>
+                  <textarea
+                    class="form-control resultContainer"
+                    rows="3"
+                    [value]="resultString"
+                  >
+                  </textarea>
+                 </ng-template>
+               </div>
+             </app-resizable-div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

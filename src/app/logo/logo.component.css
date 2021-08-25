@@ -1,0 +1,23 @@
+.img{
+
+    width: 15%;
+
+    height: auto;
+    position: absolute;
+    top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+
+
+}
+@media(max-width:800px){
+  .img{
+    width: 160px;
+  }
+}
+@media(max-width:500px){
+  .img{
+    width: 140px;
+  }
+}

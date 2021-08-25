@@ -1,0 +1,42 @@
+
+  <div class="admin-panel">
+
+    <nav class="col-md-2 navbar-dark d-md-block sidebar navbar-expand-md sidebar">
+      <div class="sidebar-sticky">
+              <div class="mobile-header">
+                <img src="../../assets/logo.png" alt="" class="mobile-header-img">
+                <button type="button" class="navbar-toggler" (click)="collapsed = !collapsed">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+
+            <div class=" collapse  navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+
+
+            <!-- Navigation links -->
+
+            <div class="accordion navList" id="adminAccordion">
+              <img src="../../assets/shortLogo.png" alt="" class="navImg"/>
+                  <app-regular-item Name="Home" routerLink="/home"></app-regular-item>
+                  <app-regular-item Name="Alarms" routerLink="/alarms"></app-regular-item>
+                  <app-regular-item Name="Projects" routerLink="/logs"></app-regular-item>
+                  <app-regular-item Name="logs" routerLink="/logs"></app-regular-item>
+                  <app-regular-item Name="Dashboard" routerLink="/logs"></app-regular-item>
+
+            </div>
+          </div>
+      </div> <!--End of sidebar sticky class -->
+    </nav>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
+

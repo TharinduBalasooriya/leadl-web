@@ -1,0 +1,33 @@
+<app-logo></app-logo>
+<img src = "/assets/LeadLtheme.png" class = "img">
+
+<div class = "form">
+
+<form>
+    <div class = "loginheading"> <h3>Sign Up</h3>
+
+    </div>
+    <div>
+        <label class="form-label" for="givenName">User Name</label>
+        <input type="text" name="givenName" [(ngModel)]="givenName" required placeholder="Enter user name"  class="form-control">
+    </div>
+
+    <div>
+        <label class="form-label" for="email">Email address</label>
+        <input type="email" name="email" [(ngModel)]="email" required placeholder="Enter your email"  class="form-control">
+    </div>
+    <div>
+        <label  class="form-label" for="password">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" required placeholder="Enter your password"  class="form-control">
+    </div>
+
+    <div>
+      <p class = "error">{{error}}</p>
+      <p class ="message">{{message}}</p>
+
+        <button (click)="register()" class="btn btn-primary btn-block" type="button"> Register </button>
+    </div>
+</form>
+
+<p class="mb-0">Already a member?<a href="/login" class="text-primary ml-1">Login</a></p>
+</div>

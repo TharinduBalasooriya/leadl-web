@@ -1,0 +1,179 @@
+.container-main {
+  height: 100vh;
+  padding: 0%;
+}
+
+.sideBar {
+  background-color: #2e2b3e;
+  padding: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navClass {
+  width: 100%;
+  height: 100%;
+}
+th,
+td {
+  padding: 30px;
+  text-align: center;
+  color: #dad1d1;
+}
+
+tr {
+  margin-top: 100px;
+}
+
+.tbody {
+  margin-top: 100px;
+}
+.table {
+  margin-top: 100px;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+.searchbar {
+  background-color: #f7f7f7;
+}
+.search {
+  float: left;
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 10px;
+  height: 5%;
+  border: 1px #2e2b3e;
+  border-radius: 5px;
+  background-color: #403c54;
+  border-color: #f7f7f7;
+}
+.searchbar {
+  background-color: #2e2b3e;
+}
+
+.log {
+  color: aqua;
+}
+.navClass mat-drawer {
+  background-color: #2e2b3e;
+  width: 20%;
+}
+
+.navClass img {
+  width: 100%;
+  margin-bottom: 30%;
+}
+.singleItem th,
+td {
+  padding: 15px;
+  text-align: center;
+  color: #dad1d1;
+}
+.navClass mat-drawer-content {
+  background-color: #2e2b3e;
+}
+.highlight {
+  background-color: #4e4e55;
+}
+.highlight:nth-child(even) {
+  background: #3b384a;
+}
+.highlight:nth-child(odd) {
+  background: #4c4961;
+}
+
+.highlight:hover {
+  background-color: #6e71cf;
+
+  color: #f1f1f1;
+}
+
+body {
+  background-color: #1e1c28;
+}
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.form {
+  background-color: #2e2b3e;
+  margin-bottom: 10%;
+  margin-top: 8%;
+  width: 100%;
+  padding: 10%;
+  font-size: small;
+
+}
+
+.loginheading {
+  color: #c3c8cb;
+  text-align: center;
+}
+
+.form-control,
+input[type="text"],
+select.form-control {
+  border-color: #6e71cf;
+  border: 2px solid #6e71cf;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: #c3c8cb;
+}
+
+.btn-primary {
+  height: 50px;
+  background-color: #6e71cf;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btn-block1 {
+  background-color: #6e71cf;
+  padding: 10px;
+  margin-right: 10px;
+  margin-right: 25%;
+  width: 30%;
+  border-color: #2e2b3e;
+}
+
+.btn-block2 {
+  background-color: #5a5a61;
+  padding: 10px;
+  width: 30%;
+  border-color: #2e2b3e;
+}
+.passwordchange {
+  text-align: center;
+  color: #6e71cf;
+}
+
+.mb-0 {
+  color: #c3c8cb;
+  text-align: center;
+}
+.error {
+  color: crimson;
+}
+
+.navList {
+  position: fixed;
+}

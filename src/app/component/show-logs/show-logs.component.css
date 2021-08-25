@@ -1,0 +1,64 @@
+.container-main{
+    height: 100vh;
+    padding: 0%;
+
+
+  }
+  .sideBar{
+
+    background-color: #2e2b3e;
+    padding: 0;
+
+
+  }
+  /* .txtarea{
+
+    border: 1px solid #888;
+
+
+ } */
+ .txtArea{
+
+   resize: none;
+   width: 100%;
+   background-color: rgba(230, 230, 230, 0.933);
+   font-size: smaller;
+
+
+
+
+ }
+
+ .breadcrumb{
+   color: aliceblue;
+ }
+
+.containerLogEvent{
+  background-color: rgba(230, 230, 230, 0.933);
+  margin-bottom: 0%;
+
+}
+.dropdown{
+  margin-bottom: 10%;
+  width: 100px;
+
+}
+.logsEventHeading{
+  padding: 6px;
+  margin-left: 2%;
+}
+
+#viewAStxt{
+
+  margin-left: 5%;
+  margin-top: 2%;
+  
+}
+
+.btnexportAs{
+  border-color: #c0bfc7;
+  border-radius: 4px;
+}
+.searchbar{
+  margin-top: 0%;
+}

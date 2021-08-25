@@ -1,0 +1,170 @@
+.container-main{
+  height: 100vh;
+  padding: 0%;
+
+}
+.sideBar{
+  background-color: #2e2b3e;
+  padding: 0;
+}
+
+.logFileContainer{
+
+  height: 90vh;
+
+  height: 102vh;
+
+  resize: none;
+  white-space: wrap;
+  background-color: #d8d5d5;
+  border-radius: 10px;
+
+}
+.container{
+
+  width: 100%;
+
+}
+.mainContainer{
+
+  height: 100vh;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 6px;
+
+
+
+
+}
+#editor{
+  width: 100%;
+  margin-left: 0%;
+  padding: 0%;
+  margin-right: 0%;
+
+}
+#row{
+  margin: 0%;
+}
+.editor{
+  background-color: #2e2b3e;
+  height: 50vh;
+  resize: vertical;
+  width: 100%;
+  margin-left: 0%;
+  padding: 0%;
+  border: 1px rgb(182, 181, 181);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.buttonSection{
+  color: white;
+  padding:12px;
+  text-align: right;
+
+ margin-top: 2%;
+ margin-bottom: 2%;
+}
+.resultContainer{
+  height: 50vh;
+  resize: vertical;
+  background-color: #4C4961;
+  color: white;
+  border-radius: 10px;
+
+}
+.run-btn-contain{
+  display: flex;
+  justify-content: center;
+
+
+}
+.runbutton{
+ padding: 6px;
+ width: 100px;
+ text-align: center;
+  right: 38px;
+  position: absolute;
+}
+.savebutton{
+  padding: 6px;
+  width: 40px;
+}
+
+.loadingSpinner{
+  color: white;
+}
+
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+textarea{
+  border-radius: 0px;
+}
+.playground-container{
+  margin-top: 2%;
+  padding-bottom:2%;
+  background-color: #2e2b3e;
+  border-radius: 6px;
+ 
+
+}
+.playgroudtxt{
+  color: aliceblue;
+  padding: 20px;
+
+
+
+}
+.playground {
+  display: flex;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius:10px ;
+
+}
+
+.playground-logfile{
+  margin-right: 10px;
+  border-radius:6px;
+
+}
+.breadcrumb {
+  margin-top: 1%;
+}
+.heading{
+  background-color: aliceblue;
+}
+
+.file-upload {
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+
+  color: white;
+}
+.playground > div{
+  width: 100%;
+}
+.result-container{
+  width: 100%;
+  border-radius: 6px;
+}
+.ace_editor{
+  border-radius: 6px;
+
+
+}
+
+

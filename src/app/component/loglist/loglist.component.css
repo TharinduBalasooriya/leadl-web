@@ -1,0 +1,151 @@
+.container-main{
+  height: 100vh;
+  padding: 0%;
+  
+}
+.sideBar {
+  background-color: #2e2b3e;
+  padding: 0;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navClass {
+  width: 100%;
+  height: 100%;
+}
+th,
+td {
+  padding: 30px;
+  text-align: center;
+  color: #dad1d1;
+}
+
+tr {
+  margin-top: 100px;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+
+.log {
+  color: aqua;
+}
+.navClass mat-drawer {
+  background-color: #2e2b3e;
+  width: 20%;
+}
+
+.navClass img {
+  width: 100%;
+  margin-bottom: 30%;
+}
+.singleItem th,
+td {
+  padding: 15px;
+  text-align: center;
+  color: #dad1d1;
+}
+.navClass mat-drawer-content {
+  background-color: #2e2b3e;
+}
+.highlight {
+  background-color: #4e4e55;
+}
+.highlight:nth-child(even) {
+  background: #3b384a;
+}
+.highlight:nth-child(odd) {
+  background: #4c4961;
+}
+
+.highlight:hover {
+  background-color: #6e71cf;
+
+  color: #f1f1f1;
+}
+
+.topNavbarLogList {
+  color: w;
+}
+.topNavbarLogList a {
+  color: white;
+  margin-left: 40px;
+}
+.btndisplayresult{
+  font-size: small;
+
+
+}
+
+.card {
+  height: 200px;
+  background-color:  rgba(230, 230, 230, 0.933);
+  border-radius: 0%;
+}
+
+.projName {
+  padding: 10px;
+  margin-top: 2%;
+}
+.tbody {
+  background-color: #403c54;
+}
+
+.topNavbarLogList {
+  background-color: #e3e2e42a;
+  width: 100%;
+}
+.tblHeader {
+  border-color: rgba(255, 255, 255, 0.782);
+  border: 1px;
+}
+table,
+th,
+.topNavbarLogList {
+  border-top: 1px solid;
+  padding: 10px;
+}
+
+#row2 {
+  border-right: 1px solid;
+  border-color: rgba(255, 255, 255, 0.672);
+  color: rgba(255, 255, 255, 0.672);
+}
+
+#row2txt {
+  color: rgba(255, 255, 255, 0.672);
+  text-decoration: none;
+}
+.btn-group5 {
+  margin-left: 100%;
+}
+
+.btnedit {
+  width: 100px;
+  height: 40px;
+  margin-right: 5px;
+  background-color: #6e71cf;
+  border-color: #2e2b3e;
+  border-radius: 3px;
+  color: white;
+}
+.btndelete {
+  width: 100px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 3px;
+  background-color: #7f7f8a;
+  color: white;
+}
+.btnexecute{
+  background-color: #7f7f8a;
+  font-size: small;
+
+}

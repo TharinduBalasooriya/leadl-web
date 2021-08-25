@@ -1,0 +1,72 @@
+.container-main{
+    height: 100vh;
+    padding: 0%;
+
+
+  }
+  .sideBar{
+
+    background-color: #2e2b3e;
+    padding: 0;
+
+
+  }
+
+  .logsEventHeading{
+    padding: 6px;
+    margin-left: 2%;
+  }
+  .txtArea{
+
+    resize: none;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 0.933);
+    font-size: smaller;
+ 
+ 
+ 
+ 
+  }
+
+ .breadcrumb{
+   color: aliceblue;
+ }
+ .containerLogEvent{
+  background-color: rgba(230, 230, 230, 0.933);
+  margin-bottom: 0%;
+
+}
+.dropdown{
+  margin-bottom: 10%;
+  width: 100px;
+
+}
+.exampleFormControlTextarea1{
+  padding: 5px;
+  margin-top: 10%;
+}
+.breadcrumb {
+  margin-top: 1%;
+}
+.form-groupshowcript{
+  height: 100%;
+}
+#viewAStxt{
+
+  margin-left: 3%;
+}
+
+.logsResultHeading{
+  margin-left: 1%;
+  margin-top: 1%;
+
+}
+
+.txtArea{
+
+  resize: none;
+  width: 100%;
+  background-color: rgba(230, 230, 230, 0.933)
+
+
+}

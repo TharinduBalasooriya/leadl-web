@@ -1,0 +1,100 @@
+.navImg{
+  width: 100% ;
+}
+
+.mobile-header{
+  height: 70px;
+  background-color: #b7b8e7;
+  padding: 10px;
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:10;
+}
+.mobile-header-img{
+  width: 150px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sidebar {
+  background-color: #2e2b3e;
+  color: white;
+}
+
+.navbar-toggler{
+  float: right;
+  position: relative;
+  top: -43px;
+  right: 10px;
+  border-width: 2px;
+  border-color:rgb(21, 23, 74);
+
+}
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(21, 23, 74, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+/* Setting 100% width for smaller displays */
+@media (max-width: 768px)
+{
+
+  .mobile-header{
+    display: block;
+  }
+  .navImg{
+    display: none;
+  }
+  .admin-panel .navList{
+    padding-top: 80px;
+  }
+  .main{
+    padding-top: 100px;
+  }
+  .admin-panel{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+.admin-panel .navList{
+  width: 100%;
+}
+
+/* To make the navigation bar sticked to left */
+@media (min-width : 768px){
+  .sidebar{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    /*width:18%;*/
+    /*max-width: 220px;*/
+
+  }
+
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  /* height: calc(100vh - 48px); */
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+
+
+

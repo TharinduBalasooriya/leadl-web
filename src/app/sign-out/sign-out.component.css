@@ -1,0 +1,41 @@
+.container_sign_out{
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 0%;
+    height: 30px;
+   
+
+}
+
+.userImage{
+    height: 27px;
+    width: 27px;
+    float: right;
+ 
+}
+.Loggingout{
+    float: right;
+   
+    height:30px;
+    width: 100px;
+    font-size: small;
+    
+    background-color: #232130;
+    border: #232130;
+    color: rgb(172, 172, 172);
+    
+}
+
+
+.navbar{
+    height: 5%;
+    background-color:  #232130;
+}
+
+.bg-custom-1 {
+    background-color: #85144b;
+  }
+  
+  .bg-custom-2 {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  }

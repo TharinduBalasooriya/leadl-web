@@ -1,0 +1,176 @@
+<app-sign-out></app-sign-out>
+<div>
+  <div class="container-fluid">
+
+    <div class="row container-main">
+
+      <div class="col-md-2">
+        <app-nav-bar></app-nav-bar>
+      </div>
+
+
+
+      <div class="col-md-10 main">
+
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" href="#"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a style="color: aliceblue" href="#"> Projects</a>
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">Logs</li>
+          </ol>
+        </nav>
+
+
+        <div class="projName">
+          <h4 style="color: rgb(181, 186, 191)">{{ projectname }}</h4>
+          <div class="row g-0">
+            <div class="col-md-5 w-auto ms-auto">
+              <button class="btnedit">Edit</button>
+              <button class="btndelete">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <b> Project Details</b>
+          </div>
+          <div class="card-body">
+            
+              <div class="row">
+                <div class="col-sm">
+                  <b>
+                    <p>project Key : {{ projectId}}</p></b
+                  >
+                </div>
+                <div class="col-sm">
+                  <b>
+                    <p>Project : {{ projectname }}</p></b
+                  >
+                </div>
+                <div class="col-sm">
+                  <b>
+                    <p>Retention : {{ expiredate }}</p></b
+                  >
+                </div>
+
+                <div class="col-sm">
+                  <b>
+                    <p>Created date : {{ createdate }}</p></b
+                  >
+                </div>
+           
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <table class="table table-borderless">
+            <thead class="tableheader">
+              <tr>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm" id="row2">
+                      <a id="row2txt" style="color: #6e71cf;" href="">Logs </a>
+                    </div>
+                    <div class="col-sm" id="row2">
+                      <a id="row2txt" routerLink="/playground/{{ projectId }}"
+                        >PlayGround
+                      </a>
+                    </div>
+                    <div class="col-sm" id="row2">
+                      <a id="row2txt"  routerLink="/displayScript/{{ projectId }}">Script</a>
+                    </div>
+                  </div>
+                </div>
+              </tr>
+
+              <tr class="tblHeader">
+
+                <th scope="col">LogFile Name</th>
+                <th scope="col">LastUpdate</th>
+                <th scope="col"></th>
+
+
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+
+            <tbody class="tableheader">
+              <tr class="highlight" *ngFor="let log of logsByProject">
+                <td routerLink="/showlogs/{{ log.fileId }}">
+                  {{ log.logfilename }}
+                </td>
+                <td routerLink="/showlogs/{{ log.fileId }}">
+                  {{ log.lastupdate }}
+                </td>
+                <td routerLink="/showlogs/{{ log.fileId }}">
+                  {{ log.projectid }}
+                </td>
+
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btnexecute"
+                    
+
+                    routerLink="/displayResult/{{ log.fileId }}"
+
+                  >
+                    Execute Script
+                  </button>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add LDEL Script</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-append">
+            <table class="center">
+              <tr>
+                <td><button class="btn btn-secondary">Write Script</button></td>
+                <td></td>
+                <td>
+                  <button
+                    class="btn btn-secondary"
+                    routerLink="/uploadScript/{{ clickedId }}"
+                  >
+                    Upload script
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>

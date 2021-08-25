@@ -1,0 +1,201 @@
+.container-main{
+  height: 100vh;
+  padding: 0%;
+}
+.sideBar{
+  background-color: #2e2b3e;
+  padding: 0 15px;
+}
+@media(max-width:768px){
+  .sideBar{
+    display: none;
+  }
+}
+
+.navClass {
+  width: 100%;
+  height: 100%;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+  color: #dad1d1;
+
+}
+
+.row1{
+  margin-top: 10%;
+}
+
+.btn-secondary{
+  float: right;
+  font-size: small;
+  width: 100px;
+}
+
+.highlight{
+  background-color:#4e4e55 ;
+}
+.add-btn{
+  text-align: right;
+  width:max-content;
+  background-color:#7f7f8a;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-radius: 3px;
+}
+
+.add-btn button{
+  text-align: center;
+  padding: 10px 30px;
+  font-weight:600;
+}
+.highlight:nth-child(even) {
+  background: #3B384A;
+}
+.highlight:nth-child(odd) {
+  background: #4C4961
+}
+
+.highlight:hover{
+  background-color:#6e71cfb1;
+  color: #f1f1f1;
+}
+
+.table{
+  border-collapse: separate;
+  border-spacing: 0 15px;
+
+}
+
+.search{
+  width: 100%;
+  padding: 10px;
+  height: 5%;
+  border: 1px #999999 ;
+  font-size: small;
+  background-color: #f4f0f0;
+  border-color: #f7f7f7;
+}
+.searchbar{
+  background-color: transparent;
+  width: 50%;
+
+}
+.search-add{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.log{
+  color: aqua;
+}
+.navClass mat-drawer {
+
+  background-color: #2e2b3e;
+  width: 20%;
+}
+
+.navClass img{
+  width: 100%;
+  margin-bottom: 30%;
+
+
+}
+.singleItem th,td{
+  padding: 15px;
+  text-align: center;
+  color: #dad1d1;
+  cursor:pointer;
+}
+.navClass  mat-drawer-content{
+
+  background-color: #2e2b3e;
+}
+.tr3{
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+
+    border-spacing: 0 20px;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .highlight:nth-child(even) {
+    background: #3B384A;
+  }
+  .highlight:nth-child(odd) {
+    background: #3B384A;
+  }
+
+  .highlight:hover{
+    background-color:#3B384A;
+    color: #f1f1f1;
+  }
+  table td:nth-child(even) {
+    background: #3B384A;
+  }
+  table td:nth-child(odd) {
+    background: #4C4961
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

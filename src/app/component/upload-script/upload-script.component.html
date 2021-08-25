@@ -1,0 +1,57 @@
+<app-sign-out></app-sign-out>
+<div>
+    <div class="container-fluid">
+    <div class="row container-main">
+      <div class="col-md-2">
+        <app-nav-bar></app-nav-bar>
+      </div>
+
+      <div class="col-md-10 main">
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a   style="color: aliceblue  ;" href="#" > Home</a></li>
+              <li class="breadcrumb-item"><a   style="color: aliceblue  ;" href="#" > Projects</a></li>
+              <li class="breadcrumb-item"><a   style="color: aliceblue  ;" routerLink="/logList/:id" > Logs</a></li>
+
+              <li class="breadcrumb-item active" aria-current="page">upload Script</li>
+            </ol>
+          </nav>
+          <br /> <br /><br />
+
+          <div class="col-md-6">
+            <form method="post" action="#" id="#">
+                <div class="form-group files color">
+                  <label  style="color: aliceblue">Upload Your LDEL Script </label>
+
+
+                  <input type="file" class="form-control" (change)="onChange($event)">
+                  <br />
+                </div>
+            <br />
+            <div class="uploadbtn">
+            <button type="submit" class="btn btn-secondary" (click)="onUpload()" >Upload Script</button>
+            </div>
+
+            </form>
+
+        </div>
+
+
+
+          </div>
+          <div class="col-sm-2 sideBar"><nav class="navList">
+            <br /><br />
+
+            <h4 style="color: rgb(175, 181, 186);">Add LDEL script</h4>
+
+            <app-regular-item Name="    upload Script" routerLink="/home"></app-regular-item>
+
+            <app-regular-item Name="    Write Script " routerLink="/alarms"></app-regular-item>
+
+
+
+          </nav></div>
+         </div>
+        </div>
+      </div>

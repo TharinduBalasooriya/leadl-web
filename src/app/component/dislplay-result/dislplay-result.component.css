@@ -1,0 +1,40 @@
+.align-items-start{
+background-color:    rgba(243, 240, 240, 0.933);
+width: 100%;
+border-radius: 2px;
+
+}
+
+
+.FormControlTextarea{
+  width: 100%;
+  padding: 0%;
+  margin-left: 0%;
+  border: wheat;
+  font-size: small;
+}
+
+.scriptViwerHeader{
+  width: 100%;
+  background-color: rgba(243, 240, 240, 0.933);
+  padding: 3px;
+
+
+}
+.btn-outline-secondary{
+
+  width: 100%;
+  font-size: smaller;
+  border-bottom: none;
+  color: black ;
+ 
+}
+#btnGroup{
+ 
+  padding-top: 3px;
+  float:right;
+  
+}
+.btn-outline-secondary:focus{
+  background-color:white
+}
