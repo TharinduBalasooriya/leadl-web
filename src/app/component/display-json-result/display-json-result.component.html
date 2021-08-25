@@ -21,45 +21,39 @@
             <li class="breadcrumb-item active" aria-current="page">Result</li>
           </ol>
         </nav>
-
+        <div class="result-heading-container">
+          <h5> Result</h5>
+        </div>
         <div class = "scriptViwerHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-             <h5> Result</h5>
-            </div>
-           
-            <div class="col-sm">
+          <div class="container">
 
-              <div
-                  class="btn-group me-2"
-                  role="group"
-                  aria-label="First group"
-                  id ="btnGroup"
-                >
-                 
-                  <button
-                    type="button"
-                    id="viewResult"
-                    class="btn btn-outline-secondary"
-                    routerLink="/displayResult/{{ fileId }}"
-                  >
-                    Text
-                  </button>
-                  <button
-                    type="button"
-                    id="viewResult"
-                    class="btn btn-outline-secondary"
-                    routerLink="/displayJsonResult/{{ fileId }}"
-                  >
-                   JSON
-                  </button>
-                </div>
-            
+
+            <div
+              class="btn-group me-2"
+              role="group"
+              aria-label="First group"
+              id ="btnGroup"
+            >
+              <button
+                type="button"
+                id="viewResult"
+                class="result-type-btn"
+                routerLink="/displayResult/{{ fileId }}"
+              >
+                Text
+              </button>
+              <button
+                type="button"
+                id="viewResult"
+                class="result-type-btn"
+                routerLink="/displayJsonResult/{{ fileId }}"
+              >
+                JSON
+              </button>
             </div>
-            
-          </div>
-          
+
+
+
 
           </div>
           <div class="jsonViwer">

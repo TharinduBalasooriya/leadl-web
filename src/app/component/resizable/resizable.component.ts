@@ -19,20 +19,30 @@ import { DragDirective } from './drag.directive';
   encapsulation: ViewEncapsulation.None,
 
 })
+//@ts-ignore
 export class ResizableComponent  {
 
+  //@ts-ignore
   @HostBinding('class.resizable') true : any;
+  //@ts-ignore
   @HostBinding('class.no-transition') noTransition = false;
+  //@ts-ignore
   @HostBinding('style.width') width : any;
+  //@ts-ignore
   @HostBinding('style.height') height : any;
   // @ts-ignore
   @HostBinding('style.flex-basis') flexBasis;
 
+  //@ts-ignore
   @Input() directions: any;
+  //@ts-ignore
   @Input() rFlex = false;
 
+  //@ts-ignore
   @Output() resizeStart = new EventEmitter();
+  //@ts-ignore
   @Output() resizing = new EventEmitter();
+  //@ts-ignore
   @Output() resizeEnd = new EventEmitter();
 
   // @ts-ignore
@@ -125,10 +135,8 @@ export class ResizableComponent  {
     // @ts-ignore
     // @ts-ignore
     switch(this.dragDir) {
-      //@ts-ignore
       case 'top':
         operand = -1;
-        //@ts-ignore
       case 'bottom':
         let height = (this.h - offset * this.vy * operand) + 'px';
         if(this.rFlex) {
@@ -138,10 +146,8 @@ export class ResizableComponent  {
         }
 
         break;
-        //@ts-ignore
       case 'left':
         operand = -1;
-        //@ts-ignore
       case 'right':
         let width = (this.w - offset * this.vx * operand) + 'px';
         if(this.rFlex) {

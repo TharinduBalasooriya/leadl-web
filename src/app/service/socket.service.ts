@@ -3,6 +3,7 @@ import { Injectable,EventEmitter } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+//@ts-ignore
 export class SocketService {
 
   private socket?: WebSocket;

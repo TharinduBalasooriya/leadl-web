@@ -10,19 +10,12 @@ import { ResultModel } from '../models/result.model';
 @Injectable({
   providedIn: 'root'
 })
+//@ts-ignore
 export class LogserviceService {
 
   constructor(private http: HttpClient,private authService:AuthService) { }
 
-  // getAllLogs(){
-  //
-  //   this.http.get<LogModel[]>('https://leadl-backend.herokuapp.com/api/logs/isiniD/').subscribe(data => {
-  //       console.log(data)
-  //   })
-  //
-  //
-  //
-  // }
+
 
   getAllLogs(username :string): Observable<LogModel[]>{
 
@@ -39,11 +32,6 @@ export class LogserviceService {
     return this.http.get<string[]>('https://leadl-backend.herokuapp.com/api/projects/'+localStorage.getItem('currentUser')+"/");
   }
 
-  // getProjects(username :string){
-  //   this.http.get<string[]>('https://leadl-backend.herokuapp.com/api/projects/'+username).subscribe(data=>{
-  //     console.log(data)
-  //   });
-  // }
 
    getContent(fileId :any):Observable<ContentModel>{
 
