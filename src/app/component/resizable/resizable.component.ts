@@ -135,8 +135,10 @@ export class ResizableComponent  {
     // @ts-ignore
     // @ts-ignore
     switch(this.dragDir) {
+      //@ts-ignore
       case 'top':
         operand = -1;
+        //@ts-ignore
       case 'bottom':
         let height = (this.h - offset * this.vy * operand) + 'px';
         if(this.rFlex) {
@@ -146,8 +148,10 @@ export class ResizableComponent  {
         }
 
         break;
+        //@ts-ignore
       case 'left':
         operand = -1;
+        //@ts-ignore
       case 'right':
         let width = (this.w - offset * this.vx * operand) + 'px';
         if(this.rFlex) {
