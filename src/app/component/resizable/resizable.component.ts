@@ -136,8 +136,10 @@ export class ResizableComponent  {
         }
 
         break;
+      //@ts-ignore
       case 'left':
         operand = -1;
+        //@ts-ignore
       case 'right':
         let width = (this.w - offset * this.vx * operand) + 'px';
         if(this.rFlex) {
