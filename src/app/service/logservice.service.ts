@@ -71,9 +71,9 @@ export class LogserviceService {
    }
 
    executeLdelScriptGetJSON(logFileId :any):Observable<ResultModel>{
-   
 
-    return this.http.get<ResultModel>('http://localhost:3000/api/executeGetJSON/'+logFileId);
+
+    return this.http.get<ResultModel>('https://leadl-backend.herokuapp.com/api/executeGetJSON/'+logFileId);
 
 
    }
