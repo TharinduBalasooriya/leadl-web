@@ -23,7 +23,7 @@ export class DebugEnvComponent implements OnInit , AfterViewInit {
 
    public fileContent: string = '';
 
-
+   
 
   projectId :any = ''
   script :string = "// Variable definitions\n\n$TEST_SUITE = $(STRING)\n$TEST = $(STRING)\n\n\n// Line template definitions\n\n$$TEST_START = ['Test Case \'-[', $TEST_SUITE, ' ', $TEST, ']\' started.']\n$$TEST_PASSED = ['Test Case \'-[', $TEST_SUITE, ' ', $TEST, ']\' passed (', $TIME_INTERVAL, ' seconds).']\n$$TEST_FAILED = ['Test Case \'-[', $TEST_SUITE, ' ', $TEST, ']\' failed (', $TIME_INTERVAL, ' seconds).']\n$$NONEMPTY_LINE = [$(STRING)]\n\n\n// Block template definitions\n\n$$$TEST_EXECUTION_SUCCESS = [$$TEST_START, $$NONEMPTY_LINE_SEQUENCE, $$TEST_PASSED]"
@@ -125,23 +125,23 @@ export class DebugEnvComponent implements OnInit , AfterViewInit {
       })
     })
 
-
+   
 
       this.projectService.getProjectDetails(this.route.snapshot.paramMap.get('id')).subscribe(projectDetail=>{
         const newProject :projectModel = projectDetail
         newProject.scriptstatus = true
         newProject.script = btoa(this.editor.value)
         this.projectService.updateProject(newProject).subscribe(result=>{
-          
+          alert('Saved !!')
         })
       })
     }
   }
+  
+  
+    
 
+  
 
-
-
-
-
-
+  
 

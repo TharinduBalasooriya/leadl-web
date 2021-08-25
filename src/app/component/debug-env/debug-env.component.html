@@ -56,7 +56,9 @@
                 class="file-upload"
                 (filesChanged)="setFileList($event)"
               >
-             
+              <div>
+                {{ fileList1 | json }}
+              </div>
               <textarea
               [(ngModel)]="logFile"
               class="form-control logFileContainer"
