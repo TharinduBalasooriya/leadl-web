@@ -1,0 +1,69 @@
+.align-items-start {
+  width: 100%;
+  border-radius: 2px;
+}
+.container-main{
+  padding: 15px;
+}
+
+.FormControlTextarea {
+  width: 100%;
+  padding: 0%;
+  margin-left: 0%;
+  border: wheat;
+}
+
+.scriptViwerHeader {
+  width: 100%;
+  padding: 3px;
+
+}
+.jsonFileContainer {
+  height: 102vh;
+  width: 100%;
+  resize: none;
+
+  background-color: #fffefe;
+  border-radius: 5px;
+
+
+}
+.file-upload {
+
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  font-size: small;
+
+  color: rgb(255, 255, 255);
+}
+
+
+
+.inputgroupContainer{
+  width: 100%;
+}
+
+file-upload{
+  color: grey;
+}
+
+.btncreate{
+    margin-bottom: 10px;
+    border-color: #dcd9d9ef;
+    color: #dcd9d9ef;
+}
+    .breadcrumb-item{
+      color:var(--theme-breadcrum-color);
+      }
+      .breadcrumb-item a{
+      color:var(--theme-breadcrum-color);
+        text-decoration: none;
+      }
+
+.tableborder{
+  border:0.1px solid #ffffff2a;
+  padding: 10px;
+
+
+}

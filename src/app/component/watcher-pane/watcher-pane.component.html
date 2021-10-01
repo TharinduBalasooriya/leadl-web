@@ -1,0 +1,68 @@
+<div class="continer-fluid watcher-main">
+  <div class="watcher-top row">
+    <div class="col-sm-10">
+      <div ngbDropdown class="d-inline-block">
+        <button class="console-button" id="dropdownBasic1" ngbDropdownToggle>
+          <span *ngIf="selectedBaseGraphName; else elseBlock">
+
+
+            {{ selectedBaseGraphName }}
+          </span>
+          <ng-template #elseBlock>Select JSON</ng-template>
+        </button>
+        <div ngbDropdownMenu class="dropDownMenu">
+          <button
+            ngbDropdownItem
+            class="dropDownMenuItem"
+            (click)="onSelectGraph(log.fileId, log.logfilename,true)"
+            *ngFor="let log of baseGraphs"
+          >
+            {{ log.logfilename }}
+          </button>
+          <button
+            ngbDropdownItem
+            class="dropDownMenuItem"
+            (click)="onSelectCustomJSON(customJSONList[i])"
+            *ngFor="let cusJSON  of customJSONList;index as i"
+          >
+            {{ cusJSON.customJsonName }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <button *ngIf="baseGraphContent"
+      class="console-button" (click)="onDebug()">
+
+      Start Debug
+      <mat-icon> pest_control </mat-icon>
+      <div class="led-green"></div>
+    </button>
+
+
+    </div>
+  </div>
+
+  <div class="watcherBody row">
+
+    <div class="col-6 variables">
+      <app-variable-list-item variable_name={{varaible.name}} *ngFor="let varaible of  varaibles;index as i" (click)="onClickvaraible(i)"></app-variable-list-item>
+    </div>
+    <div class="col-6 values">
+
+      <div *ngIf="selectedVariable as value; else elseBlock2">
+        <div *ngIf="selectedVariable.dataType==='NODE' else elseBlock3">
+          <app-nodevariable-values [varaible]="selectedVariable"></app-nodevariable-values>
+        </div>
+        <ng-template #elseBlock3>
+          <app-variable-values [varaible]="selectedVariable"></app-variable-values>
+        </ng-template>
+
+
+      </div>
+      <ng-template #elseBlock2></ng-template>
+
+    </div>
+
+  </div>
+</div>

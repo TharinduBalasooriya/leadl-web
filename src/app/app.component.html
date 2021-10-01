@@ -1,4 +1,8 @@
+<app-nav-bar *ngIf="navbar" (collapseEvent)="checkIfCollapsed($event)"></app-nav-bar>
 
 
+<div [ngClass]="{'main-body':!collapsed&&navbar,'main-collapsed':collapsed,'main-nonav':!navbar }" >
   <router-outlet></router-outlet>
+</div>
+
 

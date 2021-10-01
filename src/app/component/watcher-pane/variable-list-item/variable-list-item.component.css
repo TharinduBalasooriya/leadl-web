@@ -1,0 +1,13 @@
+.itemContainer
+{
+  /* height: 3px; */
+ color: white;
+  margin: 0%;
+  height: max-content;
+  /* height: 100%; */
+}
+
+.itemContainer:hover{
+  background-color: #6272a4;
+
+}

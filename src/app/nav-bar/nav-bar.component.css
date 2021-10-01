@@ -8,12 +8,12 @@
   padding: 10px;
   display:none;
   position: fixed;
-  top: 0;
+
   left: 0;
   right: 0;
   z-index:10;
 }
-.mobile-header-img{
+.mobile-header-img {
   width: 150px;
   text-align: center;
   margin-left: auto;
@@ -22,8 +22,12 @@
 }
 
 .sidebar {
-  background-color: #2e2b3e;
-  color: white;
+  background-color:var(--theme-sidebar);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color:var(--theme-sidebar-text-color);
 }
 
 .navbar-toggler{
@@ -52,6 +56,8 @@
   }
   .navImg{
     display: none;
+    margin-top: 0%;
+    padding-top: 0px;
   }
   .admin-panel .navList{
     padding-top: 80px;
@@ -60,10 +66,11 @@
     padding-top: 100px;
   }
   .admin-panel{
-    position: absolute;
+    /* position: absolute;
     z-index: 10;
     left: 0;
-    right: 0;
+    right: 0; */
+    width: 50px;
   }
 
 }
@@ -71,6 +78,7 @@
 .admin-panel .navList{
   width: 100%;
 }
+
 
 /* To make the navigation bar sticked to left */
 @media (min-width : 768px){
@@ -81,20 +89,67 @@
     position: fixed;
     /*width:18%;*/
     /*max-width: 220px;*/
+    z-index: 100; /* Behind the navbar */
+    padding: 0px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 
   }
 
 }
 
-.sidebar-sticky {
+ .sidebar-sticky {
   position: relative;
   top: 0;
   /* height: calc(100vh - 48px); */
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
+.navList{
+  width: 200px;
+  height: 100vh;
+  /*background-color: #2e2b3e;*/
+  margin: 0;
+  /* padding-top: 12px; */
+}
+
+.collapsedNavlist{
+  width: 48px;
+  background-color: var(--theme-sidebar);;
+  height: 100vh;
+  margin: 0;
+  padding-top: 56px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+}
+
+.collapsedItem{
+  text-align: center;
+  margin-bottom: 24px;
+}
+.collapsedItem:hover{
+  cursor: pointer;
+  border-left: 2px solid white;
+}
 
 
+.collapsedIcon{
+position: relative;
+color:var( --theme-collasibleIcon-color);
+top: -150px;
+float:right;
+left: 32px;
+  
+}
 
 
+.collapsedIcon2{
+  position: relative;
+  color:var( --theme-collasibleIcon-color);
+  top: -45px;
+  float:right;
+  left: 8px;
 
+  }

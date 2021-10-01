@@ -1,8 +1,17 @@
-body {background-color: #1e1c28;
-    font-size: medium;
+body {
+  background-color: var(--theme-background);
+  font-size: .875rem;
+  z-index: 2;
+  font-family: 'roboto';
+    color: var(--theme-color);
 }
-.main{
-  padding: 10px 20px;
+
+.main-body{
+  margin-left: 200px;
+ 
+}
+.main-collapsed{
+  margin-left: 50px;
 }
 @media (max-width: 768px) {
   .main{
@@ -10,3 +19,6 @@ body {background-color: #1e1c28;
   }
 }
 
+.main-nonav{
+  margin-left: 0px;
+}

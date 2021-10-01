@@ -15,7 +15,7 @@ export interface  LogModel {
   lastupdate:string
   fileId:string
 
-  
+
 }
 
 
@@ -28,3 +28,4 @@ export interface  LogModelJSON extends LogModel{
 export interface LogModelMongoDB extends  LogModel{
   //_id:mon
 }
+

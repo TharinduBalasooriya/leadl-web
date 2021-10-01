@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
+import { ThemeserviceService} from "../service/themeservice.service";
 
 @Component({
   selector: 'app-sign-out',
@@ -8,7 +9,7 @@ import { Auth } from 'aws-amplify';
   styleUrls: ['./sign-out.component.css'],
 })
 export class SignOutComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router,private themeservice:ThemeserviceService ) {}
 
   ngOnInit(): void {}
 
@@ -28,5 +29,13 @@ export class SignOutComponent implements OnInit {
     Auth.currentUserInfo().then((result) => {
       console.log(result);
     });
+  }
+  get light() {
+    return this.themeservice.theme === 'light';
+  }
+
+  set light(enabled: boolean) {
+    // @ts-ignore
+    this.themeservice.theme = enabled ? 'light' : null;
   }
 }

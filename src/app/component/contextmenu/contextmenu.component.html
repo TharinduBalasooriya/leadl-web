@@ -1,0 +1,77 @@
+<div class="contextmenu" [ngStyle]="{ 'left.px': x, 'top.px': y ,'right.px' :x }">
+  <table class="contextTbl">
+    <thead>
+      <tr>
+        <td class="colname" (click)="open(content)">Bind</td>
+      </tr>
+      <tr>
+
+        <td class="colname" (click)="onSelectScripName(scriptName)" (click)="HandleUnBindJson()">Unbind</td>
+      </tr>
+      <tr>
+        <td class="colname" routerLink="/ldalPlay/{{ _id }}">
+          Open in editor
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+<!-- Modal -->
+<ng-template #content let-modal>
+  <div class="modal-header createScript">
+    <h4 class="modal-title scriptName" id="modal-basic-title  ">
+      Choose JSON to bind
+    </h4>
+  </div>
+  <div class="modal-body createScript">
+    <form #f="ngForm">
+      <input name="_id" [(ngModel)]="_id" type="hidden" />
+      <input name="scriptName" [(ngModel)]="scriptName" type="hidden" />
+
+      <input name="boundStatus" [(ngModel)]="boundStatus" type="hidden" value = 'true' />
+      <input name="projectId" [(ngModel)]="projectId" type="hidden" />
+
+      <div class="loglist">
+        <h6 class = "jsonHeading"> Log JSON</h6>
+        <select multiple class="loglist" size="6" [(ngModel)]="boundedId">
+          <option
+            class="modname"
+            *ngFor="let log of logsByProject"
+            (click)="onSelectLogItem(log.fileId)"
+            value="{{ log.fileId }}"
+            
+          >
+            {{ log.logfilename }}
+          </option>
+        </select>
+      </div>
+      <div></div>
+      <div class="loglist">
+        <h6 class = "jsonHeading"> Custom JSON</h6>
+        <select multiple class="loglist" size="6" [(ngModel)]="boundedId" >
+          <option
+            class="modname"
+
+            *ngFor="let json of jsonsByProject"
+            (click)="onSelectItem(json._id)"
+            value="{{ json._id}}"
+          >
+            {{ json.customJsonName }}
+          </option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer createScript">
+    <button
+      type="button"
+      class="btn btn-outline SaveButton"
+      (click)="HandleBindJson()"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Bind
+    </button>
+  </div>
+</ng-template>

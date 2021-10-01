@@ -1,22 +1,27 @@
-<app-sign-out></app-sign-out>
-<div>
-  <div class="container-fluid">
-    <div class="row container-main">
-      <div class="col-md-2">
-        <app-nav-bar></app-nav-bar>
-      </div>
 
-      <div class="col-md-10 main">
+
+<!--START-->
+<div class=" debug-env-body" style="padding: 0;">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+    <div>
+
+    </div>
+    <div class="flex-fill ">
+      <div class="container-fluid">
+
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a style="color: aliceblue" routerLink="/home"> Home</a>
+              <a routerLink="/home"> Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a style="color: aliceblue" routerLink="/logs"> Projects</a>
+              <a  routerLink="/logs"> Projects</a>
             </li>
             <li class="breadcrumb-item">
-              <a style="color: aliceblue" routerLink="/logList/{{ projectId }}">
+              <a  routerLink="/logList/{{ projectId }}">
                 Logs</a
               >
             </li>
@@ -29,7 +34,7 @@
           <div class="row align-items-start">
 
 
-            <div class="col"> <h4 class="playgroudtxt">LeadL Playground</h4></div>
+            <div class="col"> <h5 class="playgroudtxt">LeadL Playground</h5></div>
 
             <div class="col">
               <div class="row buttonSection ">
@@ -38,7 +43,7 @@
                     class="btn btn-secondary runbutton"
                     (click)="onExecute()">
                    <span class ="run-btn-contain">
-                      <mat-icon>
+                      <mat-icon width ="10px" height="10px">
                      play_arrow
                    </mat-icon>
                     Run
@@ -56,6 +61,8 @@
                 class="file-upload"
                 (filesChanged)="setFileList($event)"
               >
+             
+              <p class = "uploadlogfile">Click here to upload a log file</p>
               <div>
                 {{ fileList1 | json }}
               </div>
@@ -72,7 +79,7 @@
              <app-resizable-div>
                <div class ="editor">
                  <ace-editor
-                   #editor style="height:100%;" [theme]="'dracula'">
+                   #editor style="height:100%;" [theme]="'dracula'" [autoUpdateContent]="true">
                  </ace-editor>
                </div>
              </app-resizable-div>

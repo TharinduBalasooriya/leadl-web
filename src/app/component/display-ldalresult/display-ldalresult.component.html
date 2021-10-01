@@ -1,0 +1,39 @@
+<div class="container-fluid" style="padding: 0">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+
+    <div class="flex-fill">
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a routerLink="/home"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a routerLink="/logs"> Projects</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a routerLink=""> Logs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Result</li>
+          </ol>
+        </nav>
+        <div class="result-heading-container">
+          <h5>Script Result</h5>
+        </div>
+        <div class="scriptViwerHeader">
+          <div class="form-group">
+            <div class="form-groupshowcript">
+              <textarea class="FormControlTextarea" rows="30" readonly>
+                 {{ fileString }}
+                </textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

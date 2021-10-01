@@ -1,0 +1,43 @@
+:root{
+  --theme-background: #1e1c28;
+  --theme-color: rgba(255,255,255,.75);
+  --theme-sidebar: #2e2b3e;
+
+  --theme-logtableheading-color: #dad1d1;
+  --theme-topbar-background:#232130;
+  --theme-tablerow-even-color:#3B384A;
+  --theme-tablerow-odd-color:#4C4961;
+  --theme-tablehighlight-hover-color:#6e71cfb1;
+  --theme-breadcrum-color:#E8E8E8;
+  --theme-createproject-button-color:#7f7f8a;
+  --theme-loginbuttoncolor: #6E71CF;
+  --theme-loginheadingcolor:#c3c8cB;
+  --theme-loginformlabecolor:#c3c8cB;
+ --theme-loginforgetpasswordcolor:#6E71CF;
+  --theme-creteprojectform-color:#B7B8E7;
+  --theme-excuteButton-color:white;
+  --theme-excuteButton-backgound:#6c757d;
+  --theme-text-color:#dad1d1;
+  --theme-sidebar-text-color:white;
+  --theme-playground-background:#d8d5d5;
+  --theme-playgroundresult-background:#4C4961;
+  --theme-playgroundContainer-background:#2e2b3e;
+  --theme-runbutton-background:#6c757d;
+  --theme-playgroundtxt-color:rgba(174, 174, 174, 0.631);
+  --theme-playground-border-color:white;
+  --theme-playground-resultcontainer-color:white;
+  --theme-loglist-projname-color:rgb(181, 186, 191);
+  --theme-loglist-row2txt-color:rgba(255, 255, 255, 0.672);
+  --theme-loglist-tableheader-color:white;
+  --theme-searchbar-background:#403c54;
+  --theme-watcher-pane-background:#1e1c28;
+  --theme-script-resultheader-background:#1e1c28;
+  --theme-button-txt-color:white;
+  --theme-button-border-color:#6c757d;
+  --theme-ldal-script-result-header-background:#2e2b3e;
+  /*--theme-ace-editor-background:black;*/
+  --theme-top-nav-backgorund:rgba(183, 184, 231, 1);
+  --theme-sidebar-hover:#B7B8E7;
+  --theme-collasibleIcon-color:#4C4961;
+
+}

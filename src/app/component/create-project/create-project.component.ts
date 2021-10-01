@@ -35,7 +35,7 @@ export class CreateProjectComponent implements OnInit {
       _id: this._id,
       userid: this.userid,
       createdate: this.createdate,
-      scriptstatus:this.scriptstatus,
+      scriptStatus:this.scriptstatus,
       script:this.script
 
     };

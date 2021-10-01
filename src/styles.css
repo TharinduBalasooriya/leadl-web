@@ -1,6 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/styles/themes/dark.css";
+@import "./app/styles/themes/light.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 
-html, body { height: 100%;
-    background-color: #1e1c28; }
-body { margin: 0; font-family: "Gill Sans", sans-serif;}
+html, body {
+  height: 100%;
+ 
+  background-color:var(--theme-background);
+  color:var(--theme-color);
+  }
+body { font-family: "Gill Sans", sans-serif;}
+
+.mat-icon {
+  vertical-align: middle;
+}
+.sign-out .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #B7B8E7;
+}
+.sign-out .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #6E71CF;
+}
+.sign-out .mat-slide-toggle-thumb {
+  background-color:#6a6973 ;
+  height: 18px;
+  width:18px;
+}

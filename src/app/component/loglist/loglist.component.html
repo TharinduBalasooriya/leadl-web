@@ -1,38 +1,42 @@
-<app-sign-out></app-sign-out>
-<div>
-  <div class="container-fluid">
-
-    <div class="row container-main">
-
-      <div class="col-md-2">
-        <app-nav-bar></app-nav-bar>
-      </div>
-
-
-
-      <div class="col-md-10 main">
-
-
+<div class="container-fluid" style="padding: 0;">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+    <div class="flex-fill">
+      <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a style="color: aliceblue" href="#"> Home</a>
+              <a href="#"> Home</a>
             </li>
             <li class="breadcrumb-item">
-              <a style="color: aliceblue" href="#"> Projects</a>
+              <a href="#"> Projects</a>
             </li>
 
-            <li class="breadcrumb-item active" aria-current="page">Logs</li>
+            <li aria-current="page" class="breadcrumb-item active">Logs</li>
           </ol>
         </nav>
 
-
-        <div class="projName">
-          <h4 style="color: rgb(181, 186, 191)">{{ projectname }}</h4>
-          <div class="row g-0">
-            <div class="col-md-5 w-auto ms-auto">
-              <button class="btnedit">Edit</button>
-              <button class="btndelete">Delete</button>
+        <div
+          class="
+            d-flex
+            justify-content-between
+            flex-wrap flex-md-nowrap
+            align-items-center
+          "
+        >
+          <div class="projName">
+            <h4>{{ projectname }}</h4>
+          </div>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group">
+                  <button class="btnedit btn-outline-secondary">Edit</button>
+                  <button class="btndelete btn-outline-secondary">Delete</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -42,42 +46,31 @@
             <b> Project Details</b>
           </div>
           <div class="card-body">
-            
-              <div class="row">
-                <div class="col-sm">
-                  <b>
-                    <p>project Key : {{ projectId}}</p></b
-                  >
-                </div>
-                <div class="col-sm">
-                  <b>
-                    <p>Project : {{ projectname }}</p></b
-                  >
-                </div>
-                <div class="col-sm">
-                  <b>
-                    <p>Retention : {{ expiredate }}</p></b
-                  >
-                </div>
-
-                <div class="col-sm">
-                  <b>
-                    <p>Created date : {{ createdate }}</p></b
-                  >
-                </div>
-           
-            </div>
+            <table class="table logist-project">
+              <tr>
+                <th>Project Key</th>
+                <td>{{ projectId }}</td>
+                <th>Project Name</th>
+                <td> {{projectname}}</td>
+              </tr>
+              <tr>
+                <th>Retention</th>
+                <td> {{expiredate}}</td>
+                <th>Created date</th>
+                <td>{{createdate}}</td>
+              </tr>
+            </table>
           </div>
         </div>
 
         <div>
-          <table class="table table-borderless">
+          <table class="table table-borderless vertical-align-middle">
             <thead class="tableheader">
               <tr>
                 <div class="container">
-                  <div class="row">
+                  <div class="row top-text-container">
                     <div class="col-sm" id="row2">
-                      <a id="row2txt" style="color: #6e71cf;" href="">Logs </a>
+                      <a id="row2txt" href="">Logs </a>
                     </div>
                     <div class="col-sm" id="row2">
                       <a id="row2txt" routerLink="/playground/{{ projectId }}"
@@ -85,50 +78,60 @@
                       </a>
                     </div>
                     <div class="col-sm" id="row2">
-                      <a id="row2txt"  routerLink="/displayScript/{{ projectId }}">Script</a>
+                      <a
+                        id="row2txt"
+                        routerLink="/displayScript/{{ projectId }}"
+                        >Script</a
+                      >
+                    </div>
+                    <div class="col-sm" id="row2">
+                      <a
+                        id="row2txt"
+                        routerLink="/ldalScriptList/{{ projectId }}"
+                        >Queries</a
+                      >
+                    </div>
+
+                    <div class="col-sm" id="row2">
+                      <a id="row2txt" routerLink="/projectJsons/{{ projectId }}"
+                        >JSON</a
+                      >
                     </div>
                   </div>
                 </div>
               </tr>
 
-              <tr class="tblHeader">
+            <tr class="tblHeader">
+              <th scope="col">Log File Name</th>
+              <th scope="col">Last Update</th>
+              <th scope="col"></th>
 
-                <th scope="col">LogFile Name</th>
-                <th scope="col">LastUpdate</th>
-                <th scope="col"></th>
-
-
-                <th scope="col"></th>
-
-              </tr>
+              <th scope="col"></th>
+            </tr>
             </thead>
 
             <tbody class="tableheader">
-              <tr class="highlight" *ngFor="let log of logsByProject">
-                <td routerLink="/showlogs/{{ log.fileId }}">
-                  {{ log.logfilename }}
-                </td>
-                <td routerLink="/showlogs/{{ log.fileId }}">
-                  {{ log.lastupdate }}
-                </td>
-                <td routerLink="/showlogs/{{ log.fileId }}">
-                  {{ log.projectid }}
-                </td>
+            <tr *ngFor="let log of logsByProject" class="highlight">
+              <td routerLink="/showlogs/{{ log.fileId }}">
+                {{ log.logfilename }}
+              </td>
+              <td routerLink="/showlogs/{{ log.fileId }}">
+                {{ log.lastupdate }}
+              </td>
+              <td routerLink="/showlogs/{{ log.fileId }}">
+                {{ log.projectid }}
+              </td>
 
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-secondary btnexecute"
-                    
-
-                    routerLink="/displayResult/{{ log.fileId }}"
-
-                  >
-                    Execute Script
-                  </button>
-                </td>
-
-              </tr>
+              <td>
+                <button
+                  class="btn btn-sm btn-secondary"
+                  routerLink="/displayResult/{{ log.fileId }}"
+                  type="button"
+                >
+                  Execute Script
+                </button>
+              </td>
+            </tr>
             </tbody>
           </table>
         </div>
@@ -141,10 +144,10 @@
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Add LDEL Script</h4>
     <button
-      type="button"
-      class="close"
-      aria-label="Close"
       (click)="modal.dismiss('Cross click')"
+      aria-label="Close"
+      class="close"
+      type="button"
     >
       <span aria-hidden="true">&times;</span>
     </button>
@@ -156,7 +159,9 @@
           <div class="input-group-append">
             <table class="center">
               <tr>
-                <td><button class="btn btn-secondary">Write Script</button></td>
+                <td>
+                  <button class="btn btn-secondary">Write Script</button>
+                </td>
                 <td></td>
                 <td>
                   <button

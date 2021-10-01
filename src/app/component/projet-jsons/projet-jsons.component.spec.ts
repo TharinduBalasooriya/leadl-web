@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RightNavbarComponent } from './right-navbar.component';
+import { ProjetJsonsComponent } from './projet-jsons.component';
 
-describe('RightNavbarComponent', () => {
-  let component: RightNavbarComponent;
-  let fixture: ComponentFixture<RightNavbarComponent>;
+describe('ProjetJsonsComponent', () => {
+  let component: ProjetJsonsComponent;
+  let fixture: ComponentFixture<ProjetJsonsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RightNavbarComponent ]
+      declarations: [ ProjetJsonsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RightNavbarComponent);
+    fixture = TestBed.createComponent(ProjetJsonsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

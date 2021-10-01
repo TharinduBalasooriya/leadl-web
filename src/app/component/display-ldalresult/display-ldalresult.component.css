@@ -1,0 +1,60 @@
+.align-items-start{
+    background-color:    rgba(243, 240, 240, 0.933);
+    width: 100%;
+    border-radius: 2px;
+
+    }
+
+
+    .FormControlTextarea{
+      width: 100%;
+      padding: 0%;
+      margin-left: 0%;
+      border: wheat;
+      font-size: small;
+
+    }
+
+    .scriptViwerHeader{
+      width: 100%;
+      padding: 2px;
+      border: 1px rgb(148, 148, 148) solid;
+
+
+
+    }
+    .result-type-btn{
+
+      font-size: 16px;
+      border-bottom: none;
+      color: black ;
+      background: #C4C4C4;
+      margin-left: 5px;
+      width: 100px;
+      border-radius: 10px 10px 0px 0px;
+      padding: 5px 8px;
+      outline: none;
+    }
+    #btnGroup{
+
+      padding-top: 10px;
+      float:right;
+
+    }
+    .result-type-btn:focus{
+      background-color:#B7B8E7;
+
+    }
+    .result-heading-container{
+      padding: 5px;
+       color: var(--theme-loglist-tableheader-color);
+      background-color: var(--theme-ldal-script-result-header-background);
+      margin-bottom: 5px;
+    }
+.breadcrumb-item{
+  color:var(--theme-breadcrum-color);
+}
+.breadcrumb-item a{
+  color:var(--theme-breadcrum-color);
+}
+

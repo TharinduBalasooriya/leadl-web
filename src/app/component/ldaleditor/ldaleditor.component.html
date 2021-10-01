@@ -1,0 +1,56 @@
+
+
+<div class="container-fluid" style="padding: 0;">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+
+    <div class="flex-fill ">
+      <div class="container-fluid">
+        <div class="container-fluid editorWrap" style="margin-top: 5px;">
+          <div class="row  editorTop">
+
+              <button
+
+                type="button"
+                class="btn btn-sm btn-outline-secondary SaveButton"
+               (click) = "OpenDebugConsole()"
+              >
+                Debug
+              </button>
+<!--              <hr />-->
+<!--              <pre>{{ closeResult }}</pre>-->
+              <button
+
+                type="button"
+                class="btn btn-sm btn-outline-secondary SaveButton"
+               (click) = "Savescript()"
+              >
+                Save Script
+              </button>
+<!--              <hr />-->
+<!--              <pre>{{ closeResult }}</pre>-->
+
+</div>
+
+          <div class="row"  [ngClass]="consoleOpen ? 'editor' : 'editor-full'">
+            <ace-editor #editor [theme]="'dracula'" [autoUpdateContent]="true" class="ace_editor">
+            </ace-editor>
+          </div>
+
+
+          <div *ngIf="consoleOpen" class="row watcherpane-container">
+
+            <div *ngIf="projectId; else elseBlock">
+              <app-watcher-pane projectId={{projectId}} [query]="editor.value"></app-watcher-pane>
+            </div>
+          <ng-template #elseBlock>Loading ...</ng-template>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

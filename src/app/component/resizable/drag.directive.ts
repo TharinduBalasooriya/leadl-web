@@ -7,18 +7,14 @@ import {DOCUMENT} from "@angular/common";
   selector: '[drag-handle]',
   providers: [ { provide: DOCUMENT, useValue: document } ],
 })
-//@ts-ignore
 export class DragDirective {
 
-  //@ts-ignore
   @Output() onDragStart = new EventEmitter();
-  //@ts-ignore
   @Output() onDrag = new EventEmitter();
-  //@ts-ignore
   @Output() onDragEnd = new EventEmitter();
 
   private dragging = false;
-//@ts-ignore
+
   constructor(private elementRef: ElementRef, @Inject(DOCUMENT) private document: any) { }
 
   ngOnInit() {

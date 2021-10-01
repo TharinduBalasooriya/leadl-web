@@ -1,0 +1,107 @@
+
+<div class="container-fluid" style="padding: 0">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+    <div class="flex-fill">
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a  href="#">
+                Projects</a
+              >
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">Jsons</li>
+          </ol>
+        </nav>
+
+        <div class="container">
+          <div class="row sidecontainer">
+            <div class="col sidecontainer">
+              <div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    flex-wrap flex-md-nowrap
+                    align-items-center
+                  "
+                >
+                  <div class="">
+                    <h5 style="color: rgb(181, 186, 191)">JSON Log</h5>
+                  </div>
+                </div>
+                <table class="table table-borderless jsontable">
+                  <thead class="tableheader">
+                    <tr class="tblHeader">
+                      <th></th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="tableheader">
+                    <tr
+                      class="highlight"
+                      *ngFor="let log of logsByProject"
+                      routerLink="/displayResult/{{ log.fileId }}"
+                    >
+                      <td>{{ log.logfilename }} / Json</td>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col sidecontainer">
+              <div>
+                <div
+                  class="
+                    d-flex
+                    justify-content-between
+                    flex-wrap flex-md-nowrap
+                    align-items-center
+                  "
+                >
+                  <div class="">
+                    <h5 style="color: rgb(181, 186, 191)">Custom JSON</h5>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                    routerLink="/createCustomJson/{{ projectId }}"
+                  >
+                    Create JSON
+                  </button>
+                </div>
+                <table class="table table-borderless">
+                  <thead class="tableheader">
+                    <tr class="tblHeader">
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="tableheader">
+                    <tr
+                      class="highlight"
+                      *ngFor="let json of jsonsByProject"
+                      routerLink="/dipalyCustomJson/{{ json._id }}"
+                    >
+                      <td>{{ json.customJsonName }} / Json</td>
+                      <td class="jsontype"> {{ json.jsonType }} 
+                            </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,41 +1,41 @@
-.container_sign_out{
-    width: 100%;
-    margin-right: 0px;
-    margin-top: 0%;
-    height: 30px;
-   
-
+.userImage {
+  height: 23px;
+  width: 23px;
+  float: right;
+}
+.Loggingout {
+  float: right;
+  font-size: small;
+  border: #232130;
+  color:var(--theme-topbar-background);
+  background-color:transparent;
+}
+.dropdownMenu {
+  background-color: #232130;
+  color: rgb(172, 172, 172);
+  top: 30px;
+  position: absolute;
+  right: 0px;
+}
+.DropdownItem {
+  color: rgb(172, 172, 172);
+}
+.DropdownItem:hover{
+  color: black;
 }
 
-.userImage{
-    height: 27px;
-    width: 27px;
-    float: right;
- 
+header {
+  z-index: 5;
+  /*background-color: var(--theme-topbar-background);*/
+  /*padding:4px;*/
+  /*background-color: #2e2b3e;*/
 }
-.Loggingout{
-    float: right;
-   
-    height:30px;
-    width: 100px;
-    font-size: small;
-    
-    background-color: #232130;
-    border: #232130;
-    color: rgb(172, 172, 172);
-    
+.sign-out{
+  height: 40px;
+
 }
-
-
-.navbar{
-    height: 5%;
-    background-color:  #232130;
+.topImage{
+  width: 80px;
+  height: 40px;
+  margin-left: 40px;
 }
-
-.bg-custom-1 {
-    background-color: #85144b;
-  }
-  
-  .bg-custom-2 {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  }

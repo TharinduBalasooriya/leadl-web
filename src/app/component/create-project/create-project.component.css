@@ -12,7 +12,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.breadcrumb-item{
+  color:var(--theme-breadcrum-color);
+}
+.breadcrumb-item a{
+  color:var(--theme-breadcrum-color);
+}
 .navClass {
   width: 100%;
   height: 100%;
@@ -113,7 +118,7 @@ textarea {
 }
 
 .form {
-  background-color: #2e2b3e;
+  background-color:var(--theme-createproject-button-color);
   margin-bottom: 10%;
   margin-top: 8%;
   width: 100%;

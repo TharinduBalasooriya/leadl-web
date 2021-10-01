@@ -1,101 +1,86 @@
-<app-sign-out></app-sign-out>
-<div>
-  <div class="container-fluid">
-    <div class="row container-main">
-      <div class="col-md-2">
-        <app-nav-bar></app-nav-bar>
-      </div>
-      <div class="col-md-8 main">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a style="color: aliceblue" href="#"> Home</a>
-            </li>
+<div  style="padding: 0">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+    <div>
 
-            <li class="breadcrumb-item active" aria-current="page">Projects</li>
-          </ol>
-        </nav>
+    </div>
+    <div class="flex-fill ">
+      <div class="container-fluid">
+        <div class="main">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#"> Home</a>
+              </li>
 
-
-
-        <div class="search-add">
-        <div class="searchbar">
-          <div class="inputgroup">
-            <form class="form-inline">
-              <div class="input-group">
-                <input type="search" class="form-control" placeholder="Search projects" aria-label="Search " aria-describedby="basic-addon1">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"> <mat-icon aria-hidden="false" aria-label="Example search icon">search</mat-icon></span>
-                </div>
-              </div>
-            </form>
-            </div>
-        </div>
-
-        <div class="add-btn">
-          <button
-            type="button"
-            class="btn btn-secondary add-btn"
-            routerLink="/createProject"
+              <li class="breadcrumb-item active" aria-current="page">
+                Projects
+              </li>
+            </ol>
+          </nav>
+          <div
+            class="
+              d-flex
+              justify-content-between
+              flex-wrap flex-md-nowrap
+              align-items-center
+            "
           >
-            Create Project
-          </button>
-        </div>
-        </div>
-    <div class="table-responsive">
-      <table class="table table-borderless">
-            <thead class="tableheader">
+            <div class="searchbar">
+              <div class="inputgroup">
+                <input
+                  type="search"
+                  class="search"
+                  placeholder="Search Projects"
+                  aria-label="Search "
+                  aria-describedby="search-addon"
+                />
+              </div>
+            </div>
 
-              <tr>
-
-                <th scope="col">Project Name</th>
-                <th scope="col">Project ID</th>
-                <th scope="col">Retention</th>
-                <th scope="col">File Size</th>
-                <th scope="col">Created date</th>
-              </tr>
-            </thead>
-
-            <tbody class="tableheader">
-              <!-- <app-single-table-project></app-single-table-project> -->
-
-              <tr
-                class="highlight"
-                *ngFor="let project of projectList"
-                routerLink="/logList/{{ project._id }}"
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2"></div>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                routerLink="/createProject"
               >
+                Create Project
+              </button>
+            </div>
+          </div>
 
-                <td data-label="Project Name">{{ project.projectname }}</td>
-                <td data-label="Project ID">{{ project._id }}</td>
-                <td data-label="Expire Date">{{ project.expiredate }}</td>
-                <td data-label="File Size">--10mb--</td>
-                <td data-label="Created date">{{ project.expiredate }}</td>
-              </tr>
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead class="tableheader">
+                <tr>
+                  <th scope="col">Project Name</th>
+                  <th scope="col">Project ID</th>
+                  <th scope="col">Retention</th>
+                  <th scope="col">File Size</th>
+                  <th scope="col">Created date</th>
+                </tr>
+              </thead>
 
-
-            </tbody>
-          </table>
-
-      </div>
+              <tbody class="tableheader">
+                <tr
+                  class="highlight"
+                  *ngFor="let project of projectList"
+                  routerLink="/logList/{{ project._id }}"
+                >
+                  <td data-label="Project Name">{{ project.projectname }}</td>
+                  <td data-label="Project ID">{{ project._id }}</td>
+                  <td data-label="Expire Date">{{ project.expiredate }}</td>
+                  <td data-label="File Size">--10mb--</td>
+                  <td data-label="Created date">{{ project.createdate }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-      <div class="col-sm-2 sideBar">
-        <nav class="navList">
-          <br /><br />
-
-          <h5 style="color: rgb(175, 181, 186)">Recent Projects</h5>
-
-          <h6 *ngFor="let project of projectList"
-             class = "tr3"
-            routerLink="/logList/{{ project._id }}"
-            style="color: rgb(200, 206, 209) ; padding-top: 10px;"
-          > {{ project.projectname }}
-
-          </h6>
-
-        </nav>
       </div>
     </div>
   </div>
 </div>
-

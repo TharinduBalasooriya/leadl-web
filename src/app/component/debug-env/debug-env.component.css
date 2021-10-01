@@ -3,25 +3,27 @@
   padding: 0%;
 
 }
+
 .sideBar{
   background-color: #2e2b3e;
   padding: 0;
 }
-
+.breadcrumb-item{
+  color:var(--theme-breadcrum-color);
+}
+.breadcrumb-item a{
+  color:var(--theme-breadcrum-color);
+}
 .logFileContainer{
-
   height: 90vh;
-
   height: 102vh;
-
   resize: none;
   white-space: wrap;
-  background-color: #d8d5d5;
+  background-color: var(--theme-playground-background);
   border-radius: 10px;
 
 }
 .container{
-
   width: 100%;
 
 }
@@ -30,8 +32,6 @@
   height: 100vh;
   border: 1px solid rgb(201, 201, 201);
   border-radius: 6px;
-
-
 
 
 }
@@ -61,15 +61,13 @@
   color: white;
   padding:12px;
   text-align: right;
-
- margin-top: 2%;
  margin-bottom: 2%;
 }
 .resultContainer{
   height: 55vh;
   resize: vertical;
-  background-color: #4C4961;
-  color: white;
+  background-color: var(--theme-playgroundresult-background);
+  color: var(--theme-playground-resultcontainer-color);
   border-radius: 10px;
 
 }
@@ -78,13 +76,18 @@
   justify-content: center;
 
 
+
 }
+
 .runbutton{
  padding: 6px;
- width: 100px;
+ width: 80px;
  text-align: center;
-  right: 38px;
+ background: transparent;
+  right: 26px;
+  color: var(--theme-playground-resultcontainer-color);
   position: absolute;
+
 }
 .savebutton{
   padding: 6px;
@@ -112,28 +115,30 @@ textarea{
   border-radius: 0px;
 }
 .playground-container{
-  margin-top: 2%;
+
   padding-bottom:2%;
-  background-color: #2e2b3e;
-  border-radius: 6px;
+  background-color: var(--theme-playgroundContainer-background);
+  border-radius: 5px;
+  max-width:100%;
 
 
 }
 .playgroudtxt{
-  color: aliceblue;
-  padding: 20px;
-
-
-
+  color:var(--theme-playgroundtxt-color);
+  position: relative;
+  top: 14px;
 }
+
 .playground {
   display: flex;
-  border: 2px solid white;
-  padding: 10px;
+  border: 1px solid ;
+  border-color:var(--theme-playground-border-color) ;
+  padding: 5px;
   border-radius:10px ;
+  margin-top: 23px;
+
 
 }
-
 .playground-logfile{
   margin-right: 10px;
   border-radius:6px;
@@ -141,6 +146,13 @@ textarea{
 }
 .breadcrumb {
   margin-top: 1%;
+}
+.breadcrumb-item{
+  color:var(--theme-breadcrum-color);
+}
+.breadcrumb-item a{
+  color:var(--theme-breadcrum-color);
+  text-decoration: none;
 }
 .heading{
   background-color: aliceblue;
@@ -151,8 +163,8 @@ textarea{
   height: 100%;
   width: 100%;
   max-width: 100%;
-
-  color: white;
+  font-size: small;
+  color: rgb(138, 138, 138);
 }
 .playground > div{
   width: 100%;
@@ -160,11 +172,14 @@ textarea{
 .result-container{
   width: 100%;
   border-radius: 6px;
+  font-size: smaller;
 }
 .ace_editor{
   border-radius: 6px;
-
-
+  font-size: smaller;
 }
 
+.playground uploadlogfile{
+  color: black;
+}
 

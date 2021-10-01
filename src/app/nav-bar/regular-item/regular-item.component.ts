@@ -11,6 +11,7 @@ export class RegularItemComponent implements OnInit {
 
   @Input()Name :string =''
   @Input()routerLink:string=''
+  @Input()IconName:string='house-fill'
   ngOnInit(): void {
   }
 

@@ -23,13 +23,19 @@ import { DisplayScriptComponent } from './component/display-script/display-scrip
 import {ResizableDivComponent} from "./component/resizable-div/resizable-div.component";
 
 import { DisplayJsonResultComponent } from './component/display-json-result/display-json-result.component';
+import { LDALEditorComponent } from './component/ldaleditor/ldaleditor.component';
+import { LDALscriptListComponent } from './component/ldalscript-list/ldalscript-list.component';
+import { DisplayLDALresultComponent } from './component/display-ldalresult/display-ldalresult.component';
+import { ProjetJsonsComponent } from './component/projet-jsons/projet-jsons.component';
+import { CreateCustomJsonComponent } from './component/create-custom-json/create-custom-json.component';
+import { DisplayCostomJsonResltComponent } from './component/display-costom-json-reslt/display-costom-json-reslt.component';
 
 
 const routes: Routes = [
 
     { path: '', pathMatch: 'full', redirectTo: 'login' },
 
-    { path: 'login', component: LoginComponent },
+    { path: 'login', component: LoginComponent},
 
     { path: 'sign-up', component: SignUpComponent },
 
@@ -49,8 +55,13 @@ const routes: Routes = [
     {path:'displayScript/:id',component: DisplayScriptComponent },
     {path:'displayJsonResult/:id',component:DisplayJsonResultComponent },
   { path: 'test', component: AceEditorComponent },
-
-
+  { path: 'ldalPlay/:id', component: LDALEditorComponent },
+  { path: 'ldalScriptList/:id', component: LDALscriptListComponent },
+  { path: 'ldalScript/:id', component: LDALscriptListComponent },
+  {path:'displayLDALResult/:id',component:  DisplayLDALresultComponent},
+  {path:'projectJsons/:id',component: ProjetJsonsComponent},
+  {path:'createCustomJson/:id',component: CreateCustomJsonComponent},
+  {path:'dipalyCustomJson/:id',component: DisplayCostomJsonResltComponent},
 
   ];
 

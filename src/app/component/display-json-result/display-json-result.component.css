@@ -1,61 +1,78 @@
-.align-items-start{
-
+.align-items-start {
+  background-color: rgba(243, 240, 240, 0.933);
   width: 100%;
   border-radius: 2px;
+}
+.scrpit-header {
+  color: var(--theme-loglist-projname-color);
+}
+.container {
+  background: var(--theme-script-resultheader-background);
+}
+.FormControlTextarea {
+  width: 100%;
+  padding: 3px;
+  margin-left: 0%;
+  border-top: 1px #83828a solid;
+  font-size: small;
+}
+.resultheading {
+  border-bottom: 1px #83828a solid;
+  margin-bottom: 2px;
+}
 
-  }
+.scriptViwerHeader {
+  width: 100%;
+  padding: 1px;
+  border: 1px #83828a solid;
+  font-size: small;
 
-
-  .FormControlTextarea{
-    width: 100%;
-    padding: 0%;
-    margin-left: 0%;
-    border: wheat;
-  }
-
-  .scriptViwerHeader{
-    width: 100%;
-    /*background-color: rgba(243, 240, 240, 0.933);*/
-    padding: 3px;
-    border: 2px white solid;
-
-
-  }
-.result-type-btn{
-
+}
+.result-type-btn {
   font-size: 16px;
   border-bottom: none;
-  color: black ;
-  background: #C4C4C4;
+  color: black;
+  background: #c4c4c4;
   margin-left: 5px;
   width: 100px;
   border-radius: 10px 10px 0px 0px;
   padding: 5px 8px;
   outline: none;
 }
-#btnGroup{
+#btnGroup {
+  float: right;
+  width: 200px;
+  margin-right: 0px;
+}
+.result-type-btn:focus {
+  background-color: #b7b8e7;
+}
+.jsonViwer {
+  background-color: white;
+  font-size: small;
+  min-height: 100vh;
+  border: 1px #83828a solid;
 
-  padding-top: 10px;
-  float:right;
+  overflow: scroll;
+
 
 }
-.result-type-btn:focus{
-  background-color:#B7B8E7;
-
+.btn-outline-secondary:focus {
+  background-color: white;
 }
-  .jsonViwer{
-    background-color: white;
-    margin-top: 48px;
-    min-height: 75vh;
-
-
-  }
-  .btn-outline-secondary:focus{
-    background-color:white
-  }
-.result-heading-container{
-  padding: 5px;
-  background: linear-gradient(90deg, rgba(110, 113, 207, 0.66) 0%, rgba(183, 184, 231, 0.28) 99.66%);
+.result-heading-container {
+  padding: 3px;
   color: white;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
+}
+.breadcrumb-item {
+  color: var(--theme-breadcrum-color);
+}
+.breadcrumb-item a {
+  color: var(--theme-breadcrum-color);
+  text-decoration: none;
+}
+.btn-outline-secondary {
+  color: var(--theme-button-txt-color);
+  border-color: var(--theme-button-border-color);
 }

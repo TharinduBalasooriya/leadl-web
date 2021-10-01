@@ -1,12 +1,25 @@
-.navItem a{
-  color: aliceblue;
+/* .navItem a{
+
   font-size: larger;
   margin-bottom: 30px;
   cursor: pointer;
+  color:var(--theme-color) ;
+  float: left;
+
+}
+.navItem{
+  float: left;
 }
 
 .navItem a:hover{
 
   background-color:rgba(207, 207, 207, 0.55);
   color: black;
+} */
+.sideBarItem{
+  margin-bottom: 12px;
+}
+.sideBarItem:hover{
+  color: var(--theme-sidebar-hover);
+  cursor: pointer;
 }

@@ -1,72 +1,67 @@
-.container-main{
-    height: 100vh;
-    padding: 0%;
-
-
-  }
-  .sideBar{
-
-    background-color: #2e2b3e;
-    padding: 0;
-
-
-  }
-
-  .logsEventHeading{
-    padding: 6px;
-    margin-left: 2%;
-  }
-  .txtArea{
-
-    resize: none;
-    width: 100%;
-    background-color: rgba(230, 230, 230, 0.933);
-    font-size: smaller;
- 
- 
- 
- 
-  }
-
- .breadcrumb{
-   color: aliceblue;
- }
- .containerLogEvent{
-  background-color: rgba(230, 230, 230, 0.933);
-  margin-bottom: 0%;
-
+.container-main {
+  height: 100vh;
+  padding: 0%;
 }
-.dropdown{
+.sideBar {
+  background-color: #2e2b3e;
+  padding: 0;
+}
+
+.logsEventHeading {
+  padding: 6px;
+  margin-left: 2%;
+  color: black;
+}
+.txtArea {
+  resize: none;
+  width: 100%;
+  background-color: rgba(255, 253, 253, 0.933);
+  font-size: smaller;
+}
+
+.breadcrumb {
+  color: var(--theme-breadcrum-color);
+}
+.containerLogEvent {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 0%;
+}
+.dropdown {
   margin-bottom: 10%;
   width: 100px;
-
 }
-.exampleFormControlTextarea1{
+.exampleFormControlTextarea1 {
   padding: 5px;
   margin-top: 10%;
 }
 .breadcrumb {
   margin-top: 1%;
+  color: var(--theme-breadcrum-color);
 }
-.form-groupshowcript{
+.breadcrumb-item {
+  color: var(--theme-breadcrum-color);
+}
+.breadcrumb-item a {
+  color: var(--theme-breadcrum-color);
+  text-decoration: none;
+}
+.form-groupshowcript {
   height: 100%;
 }
-#viewAStxt{
-
+#viewAStxt {
   margin-left: 3%;
+  color: black;
 }
 
-.logsResultHeading{
+.logsResultHeading {
   margin-left: 1%;
   margin-top: 1%;
-
 }
 
-.txtArea{
-
+.txtArea {
   resize: none;
   width: 100%;
-  background-color: rgba(230, 230, 230, 0.933)
-
-
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+  border-color: grey;
 }

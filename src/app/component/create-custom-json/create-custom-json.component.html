@@ -1,0 +1,113 @@
+
+
+<div class="container-fluid" style="padding: 0;">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+
+    <div class="flex-fill ">
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="breadcrumbList" routerLink="/home"> Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumbList" routerLink="/logs"> Projects</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumbList" routerLink=""> Logs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Result</li>
+          </ol>
+        </nav>
+        <div class="result-heading-container">
+          <div
+            class="
+              d-flex
+              justify-content-between
+              flex-wrap flex-md-nowrap
+              align-items-center
+
+            "
+          >
+            <div>
+
+            </div>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary btncreate"
+              (click)="createJson()"
+
+            >
+              Create JSON
+            </button>
+          </div>
+        </div>
+        <form class ="tableborder">
+          <div class="input-group mb-3 ">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+
+                  <label for="exampleFormControlInput1">Json Name:</label>
+
+            <input
+              type="text"
+              class="form-control jsnName"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              name="customjsonname"
+              [(ngModel)]="customjsonname"
+            />
+                </div>
+                <div class="col">
+                  <label for="exampleFormControlSelect1">JSON Format</label>
+                  <select name="JsonType" [(ngModel)]="JsonType" class="form-control" id="exampleFormControlSelect1">
+                    <option>Choose...</option>
+                    <option>TDP</option>
+                    <option>OTP</option>
+                    <option>Normal</option>
+
+                  </select>
+                </div>
+              </div>
+              </div>
+
+            <!-- <div class="input-group-prepend">
+              <span class="input-group-text jsonName">JSON file Name</span>
+            </div>
+            <input
+              type="text"
+              class="form-control jsnName"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              name="customjsonname"
+              [(ngModel)]="customjsonname"
+            /> -->
+          </div>
+
+          <div class="scriptViwerHeader tableborder">
+            <div class="container"></div>
+            <div class="form-group">
+              <div class="form-groupshowcript">
+                <app-file-upload
+                  class="file-upload"
+                  (filesChanged)="setFileList($event)"
+                >
+                Click here to upload a JSON
+                  <textarea readonly
+                    [(ngModel)]="Content"
+                    class="jsonFileContainer"
+                    value="{{ Content }}"
+                  ></textarea>
+                </app-file-upload>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

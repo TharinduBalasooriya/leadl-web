@@ -6,11 +6,14 @@ import {Auth} from "aws-amplify";
 import { AuthService } from './auth.service';
 import {ContentModel} from "../models/content.model";
 import { ResultModel } from '../models/result.model';
+import { LDALResultModel } from '../models/result.model';
+import { LDALscriptModel } from '../models/ldalScript.model';
+import { LDALRequst } from '../models/request.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
-//@ts-ignore
 export class LogserviceService {
 
   constructor(private http: HttpClient,private authService:AuthService) { }
@@ -31,6 +34,7 @@ export class LogserviceService {
     console.log('Get Projects called')
     return this.http.get<string[]>('https://leadl-backend.herokuapp.com/api/projects/'+localStorage.getItem('currentUser')+"/");
   }
+
 
 
    getContent(fileId :any):Observable<ContentModel>{
@@ -66,9 +70,26 @@ export class LogserviceService {
 
    }
 
+   executeLdalScript(scriptId :any):Observable<LDALResultModel>{
+
+    return this.http.get<LDALResultModel>('https://leadl-backend.herokuapp.com/api/executeLDAL/'+scriptId);
+   }
+
+   debugLdalScript(scriptBody :any):Observable<any>{
+
+    return this.http.post<any>('https://leadl-backend.herokuapp.com/api/debugLDAL/',scriptBody);
+   }
+
+   getScriptById(scriptId :any):Observable<LDALscriptModel>{
+
+    return this.http.get<LDALscriptModel>('https://leadl-backend.herokuapp.com/api/getscript/'+scriptId)
+   }
 
 
-
-
+   updateLDALscript(script :LDALscriptModel ): Observable<LDALResultModel> {
+    return this.http.put<LDALResultModel>(
+      'https://leadl-backend.herokuapp.com/api/script/update',script
+    );
+  }
 
 }

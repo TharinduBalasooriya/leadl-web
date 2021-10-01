@@ -4,7 +4,7 @@ export  interface projectModel{
   userid:string
   expiredate:string
   createdate:Date
-  scriptstatus:boolean
+  scriptStatus:boolean
   script:string
 }
 

@@ -22,7 +22,7 @@ img {
   }
 
   .loginheading{
-    color: #c3c8cB;
+    color:var(--theme-loginheadingcolor);
     text-align: center;
 
   }
@@ -37,13 +37,13 @@ img {
   }
 
   .form-label {
-
-    color: #c3c8cB;
+    color:var(--theme-loginformlabecolor) ;
+    /*color: #c3c8cB;*/
   }
 
   .btn-primary{
     height: 50px;
-    background-color: #6E71CF;
+    background-color: var(--theme-loginbuttoncolor);
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -57,11 +57,11 @@ img {
   }
   .passwordchange{
     text-align: center;
-    color: #6E71CF;
+
   }
 
   .mb-0{
-    color: #c3c8cB;
+    color: var(--theme-loginformlabecolor);
     text-align: center;
 
   }

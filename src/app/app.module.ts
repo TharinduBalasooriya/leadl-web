@@ -23,7 +23,7 @@ import {SideListItemComponent} from './component/side-list-item/side-list-item.c
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavBarloglistComponent } from './component/nav-barloglist/nav-barloglist.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RightNavbarComponent } from './right-navbar/right-navbar.component';
+
 import { RegularItemComponent } from './nav-bar/regular-item/regular-item.component';
 import { SingleTableProjectComponent } from './component/logs/single-table-project/single-table-project.component';
 import { ShowLogsComponent } from './component/show-logs/show-logs.component';
@@ -50,8 +50,24 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 import { FileUploadComponent } from './component/file-upload/file-upload.component';
 import {DragDropDirective  } from './directives/drag-drop.directive';
+import { LDALEditorComponent } from './component/ldaleditor/ldaleditor.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { LDALscriptListComponent } from './component/ldalscript-list/ldalscript-list.component';
 
+import { ContextmenuComponent } from './component/contextmenu/contextmenu.component';
+import { DisplayLDALresultComponent } from './component/display-ldalresult/display-ldalresult.component';
+import { WatcherPaneComponent } from './component/watcher-pane/watcher-pane.component';
+import { bullseye, ColorTheme, NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { allIcons } from 'ngx-bootstrap-icons';
 
+import { ProjetJsonsComponent } from './component/projet-jsons/projet-jsons.component';
+import { CreateCustomJsonComponent } from './component/create-custom-json/create-custom-json.component';
+import { DisplayCostomJsonResltComponent } from './component/display-costom-json-reslt/display-costom-json-reslt.component';
+
+import { VariableListItemComponent } from './component/watcher-pane/variable-list-item/variable-list-item.component';
+import { VariableValuesComponent } from './component/watcher-pane/variable-values/variable-values.component';
+import { NodevariableValuesComponent } from './component/watcher-pane/nodevariable-values/nodevariable-values.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -67,7 +83,7 @@ import {DragDropDirective  } from './directives/drag-drop.directive';
     SideListItemComponent,
     NavBarComponent,
     NavBarloglistComponent,
-    RightNavbarComponent,
+
     RegularItemComponent,
     SingleTableProjectComponent,
     ShowLogsComponent,
@@ -84,14 +100,27 @@ import {DragDropDirective  } from './directives/drag-drop.directive';
     FileUploadComponent,
 
     ResizableDivComponent,
-  
+
     ResizableComponent,
     DragDirective,
 
     SignOutComponent,
     DisplayJsonResultComponent,
     FileUploadComponent,
-    DragDropDirective  ,
+    DragDropDirective,
+    LDALEditorComponent,
+    LDALscriptListComponent,
+    DisplayLDALresultComponent  ,
+    ContextmenuComponent,
+    WatcherPaneComponent,
+
+    ProjetJsonsComponent,
+    CreateCustomJsonComponent,
+    DisplayCostomJsonResltComponent,
+
+    VariableListItemComponent,
+    VariableValuesComponent,
+    NodevariableValuesComponent,
 
 
   ],
@@ -110,9 +139,16 @@ import {DragDropDirective  } from './directives/drag-drop.directive';
     NgbModule,
     AceEditorModule,
     ResizableModule,
-
+    MatSlideToggleModule,
     AceEditorModule,
-    NgxJsonViewerModule
+    NgxJsonViewerModule,
+    NgxBootstrapIconsModule.pick(allIcons),
+    ToastrModule.forRoot({
+      closeButton: true,
+      timeOut: 15000, // 15 seconds
+      progressBar: true,
+    }),
+    ToastrModule
   ],
   providers: [ {provide:HTTP_INTERCEPTORS, useClass:JwtInterceptor,multi:true}],
   bootstrap: [AppComponent]

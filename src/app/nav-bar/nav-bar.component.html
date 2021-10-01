@@ -1,42 +1,75 @@
+<div
+  class="navList navbar-sticky sidebar"
+  id="adminAccordion"
+  *ngIf="!customCollapse; else elseBlock"
+>
 
-  <div class="admin-panel">
-
-    <nav class="col-md-2 navbar-dark d-md-block sidebar navbar-expand-md sidebar">
-      <div class="sidebar-sticky">
-              <div class="mobile-header">
-                <img src="../../assets/logo.png" alt="" class="mobile-header-img">
-                <button type="button" class="navbar-toggler" (click)="collapsed = !collapsed">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
-
-            <div class=" collapse  navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
-
-
-            <!-- Navigation links -->
-
-            <div class="accordion navList" id="adminAccordion">
-              <img src="../../assets/shortLogo.png" alt="" class="navImg"/>
-                  <app-regular-item Name="Home" routerLink="/home"></app-regular-item>
-                  <app-regular-item Name="Alarms" routerLink="/alarms"></app-regular-item>
-                  <app-regular-item Name="Projects" routerLink="/logs"></app-regular-item>
-                  <app-regular-item Name="logs" routerLink="/logs"></app-regular-item>
-                  <app-regular-item Name="Dashboard" routerLink="/logs"></app-regular-item>
-
-            </div>
-          </div>
-      </div> <!--End of sidebar sticky class -->
-    </nav>
+  <img src="../../assets/shortLogo.png" alt="" class="navImg" />
+  <!-- <div class="collapsedIcon" (click)="onCollapse()">
+    <i-bs name="chevron-left" width="15px" height="15px">
+    </i-bs>
+  </div> -->
+  <app-regular-item
+  (click)="onCollapse()"
+    IconName="arrow-left-circle-fill"
+  
+    class="collapsedIcon"
+  ></app-regular-item>
+  <app-regular-item
+    Name="Home"
+    IconName="house-fill"
+    routerLink="/home"
+  ></app-regular-item>
+  <app-regular-item
+    Name="Alarms"
+    IconName="bell-fill"
+    routerLink="/alarms"
+  ></app-regular-item>
+  <app-regular-item
+    Name="Projects"
+    IconName="search"
+    routerLink="/logs"
+  ></app-regular-item>
+  <app-regular-item
+    Name="Logs"
+    IconName="file-code-fill"
+    routerLink="/logs"
+  ></app-regular-item>
+  <app-regular-item
+    Name="Dashboard"
+    IconName="speedometer"
+    routerLink="/logs"
+  ></app-regular-item>
+  
   </div>
-
+<ng-template #elseBlock>
   
 
+  <div class="collapsedNavlist">
 
+    
+    <div class="collapsedIcon2"(click)="onCollapse()">
+      <i-bs name="arrow-right-circle-fill" width="20px" height="20px"> </i-bs>
+    </div>
+   
+    <div class="collapsedItem"></div>
 
+    <div class="collapsedItem" routerLink="/home">
+      <i-bs name="house-fill" width="20px" height="20px"> </i-bs>
+    </div>
 
-
-
-
-
-
-
+    <div class="collapsedItem" routerLink="/alarms">
+      <i-bs name="bell-fill" width="20px" height="20px"> </i-bs>
+    </div>
+    <div class="collapsedItem" routerLink="/logs">
+      <i-bs name="search" width="20px" height="20px"> </i-bs>
+    </div>
+    <div class="collapsedItem" routerLink="/logs">
+      <i-bs name="file-code-fill" width="20px" height="20px"> </i-bs>
+    </div>
+    <div class="collapsedItem" routerLink="/home">
+      <i-bs name="speedometer" width="20px" height="20px"> </i-bs>
+    </div>
+  
+  </div>
+</ng-template>

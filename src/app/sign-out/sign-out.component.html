@@ -1,21 +1,30 @@
-<nav class="navbar navbar-expand-sm justify-content-end" id="horiNavBar">
- 
+<header class="navbar navbar-dark sticky-top flex-md-nowrap shadow sign-out">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"></a>
+  <!-- <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
 
-  <div class="row">
-    <div class="col">
+  <div class="navbar-nav">
+  
+    <div class="nav-item">
+
       <div ngbDropdown class="d-inline-block">
-        <button class="Loggingout" id="dropdownBasic1" ngbDropdownToggle><img class="userImage" src="../../assets/user.png" />
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem (click)="signOut()">Sign Out </button>
-                <button ngbDropdownItem>Settings</button>
-              
-              </div>
-        
+        <mat-slide-toggle [(ngModel)]="light"> </mat-slide-toggle>
+   
+        <button class="Loggingout"  ngbDropdownToggle>
+          <img class="userImage" src="../../assets/user.png" />
+          <div
+            ngbDropdownMenu
+            aria-labelledby="dropdownBasic1"
+            class="dropdownMenu"
+          >
+            <button ngbDropdownItem class="DropdownItem" (click)="signOut()">
+              Sign Out
+            </button>
+            <button ngbDropdownItem class="DropdownItem">Settings</button>
+          </div>
         </button>
-    
-        
       </div>
     </div>
   </div>
-
-</nav>
+</header>

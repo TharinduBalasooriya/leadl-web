@@ -3,7 +3,6 @@ import { Injectable,EventEmitter } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-//@ts-ignore
 export class SocketService {
 
   private socket?: WebSocket;
@@ -15,7 +14,7 @@ export class SocketService {
   }
 
   public createSocket(fileId: string | null){
-    this.socket = new WebSocket("wss://leadl-backend.herokuapp.com/ws?regId="+fileId);
+    this.socket = new WebSocket("ws://leadl-backend.herokuapp.com/ws?regId="+fileId);
     this.socket.onopen = event => {
       this.listener.emit({"type": "open", "data": event});
     }

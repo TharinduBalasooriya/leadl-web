@@ -1,0 +1,145 @@
+<div *ngIf="contextmenu">
+  <app-contextmenu
+    id="child"
+    [childMessage]="parentMessage"
+    [x]="contextmenuX"
+    [y]="contextmenuY"
+    (click)="disableContextMenu()"
+  ></app-contextmenu>
+</div>
+
+<!-- Modal -->
+<ng-template #content let-modal>
+  <div class="modal-header scriptCreateForm">
+    <h4 class="modal-title scriptName" id="modal-basic-title  ">
+      Create Script
+    </h4>
+  </div>
+  <div class="modal-body scriptCreateForm">
+    <form>
+      <div class="form-group">
+        <div>
+          <label class="form-label scriptatt">Script Name</label>
+          <input
+            type="text"
+            name="projectName"
+            [(ngModel)]="scriptName"
+            required
+            placeholder="Enter Script Name"
+            class="form-control scriptCreateForm"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer scriptCreateForm">
+    <button
+      type="button"
+      class="btn btn-outline SaveButton"
+      (click)="createScript()"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<div class="container-fluid" style="padding: 0">
+  <div class="row">
+    <app-sign-out></app-sign-out>
+  </div>
+  <div class="d-flex">
+    <div class="flex-fill">
+      <div class="container-main" (click)="disableContextMenu()" >
+        <div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#"> Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#"> Projects</a>
+              </li>
+
+              <li class="breadcrumb-item active" aria-current="page">
+                Queries
+              </li>
+            </ol>
+          </nav>
+
+          <div>
+            <div
+              class="
+                d-flex
+                justify-content-between
+                flex-wrap flex-md-nowrap
+                align-items-center
+              "
+            >
+              <div class="">
+                <h3>LDAL Scripts</h3>
+              </div>
+              <button
+                type="button"
+                class="btn  createScript"
+                (click)="open(content)"
+              >
+                Create Script
+              </button>
+            </div>
+            <table class="table table-borderless" >
+              <thead class="tableheader">
+                <tr class="tblHeader">
+                  <th>Action</th>
+                  <th scope="col">Script Name</th>
+                  <th scope="col">Bounded Status</th>
+                  <th scope="col">Bounded ID</th>
+
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+
+              <tbody (clickOutside)="disableContextMenu()"
+                class="tableheader"
+            
+                oncontextmenu="return false;"
+              >
+                <tr
+                  class="highlight"
+                  (contextmenu)="onrightClick($event, script._id)"
+
+                  *ngFor="let script of scriptsByProject"
+                >
+                  <td>
+                    <!--                  <i class="material-icons deleteIcon">delete_forever</i>-->
+                    <i-bs name="clipboard-check" width="20" height="20"> </i-bs>
+                  </td>
+
+                  <td>
+                    {{ script.scriptName }}
+                  </td>
+                  <td>
+                    {{ script.boundStatus }}
+                  </td>
+                  <td>
+                    {{ script.boundedId }}
+                  </td>
+
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-sm executeButton"
+                      routerLink="/displayLDALResult/{{ script._id }}"
+                    >
+                      Execute Script
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

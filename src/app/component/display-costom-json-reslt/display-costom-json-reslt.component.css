@@ -1,0 +1,93 @@
+.align-items-start{
+    background-color:    rgba(243, 240, 240, 0.933);
+    width: 100%;
+    border-radius: 2px;
+
+    }
+
+    .FormControlTextarea{
+      width: 100%;
+      padding: 3px;
+      margin-left: 0%;
+      border-top: 1px #83828a solid;
+      font-size: small;
+
+    }
+    .resultheading{
+       border-bottom: 1px #83828a solid;
+       margin-bottom: 2px;
+
+    }
+
+    .scriptViwerHeader{
+      width: 100%;
+      padding: 3px;
+      border: 1px #83828a solid;
+      font-size: small;
+    }
+.container{
+  background:var(--theme-script-resultheader-background) ;
+}
+.breadcrumb-item{
+  color:var(--theme-breadcrum-color);
+}
+.breadcrumb-item a{
+  color:var(--theme-breadcrum-color);
+  text-decoration: none;
+}
+  .result-type-btn{
+
+    font-size: 16px;
+    border-bottom: none;
+    color: black ;
+    background: #C4C4C4;
+    margin-left: 5px;
+    width: 100px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 8px;
+    outline: none;
+  }
+  #btnGroup{
+
+    float:right;
+    width: 200px;
+    margin-right: 0px;
+
+
+  }
+  .result-type-btn:focus{
+    background-color:#B7B8E7;
+
+  }
+    .jsonViwer{
+      background-color: white;
+     font-size: small;
+      height: 80vh;
+      width: 95vw;
+      resize: none;
+      overflow-y: scroll;
+
+
+
+    }
+
+  /* .jsonContent{
+    height: 100%;
+    width: 80vw;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  } */
+
+    .btn-outline-secondary:focus{
+      background-color:white
+    }
+    .result-heading-container{
+      padding: 3px;
+
+      color: white;
+      margin-bottom: 1px;
+    }
+/*.btn-outline-secondary{*/
+/*  color: var(--theme-button-txt-color);*/
+/*  border-color:var(--theme-button-border-color) ;*/
+/*}*/

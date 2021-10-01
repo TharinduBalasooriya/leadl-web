@@ -1,0 +1,94 @@
+
+/* .container-main{
+  height: 100vh;
+  padding: 0%;
+} */
+.sideBar{
+  background-color: #2e2b3e;
+  padding: 0;
+}
+
+.side-main{
+  padding: 10px;
+}
+
+
+.editorWrap{
+  height:100vh;
+  border:1px solid grey;
+  padding: 2px;
+  margin-bottom: 1px;
+
+
+}
+.editor{
+  height:60%;
+  margin: 0%;
+
+}
+.editor-full{
+  height:93%;
+  margin: 0%;
+
+}
+
+.editorTop{
+  height: 40px;
+  width: auto;
+  margin: 5px;
+  background-color: #2E2B3E;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.btn-sm btn-outline-secondary{
+
+  font-size: small;
+  color: white;
+
+}
+.SaveButton{
+  margin:3px;
+  color: white;
+  /* float: right; */
+  padding-right: 0%;
+  width: 100px;
+
+}
+
+.createScript{
+
+  background-color: #2E2B3E;
+  border: 0px solid #ffffff6d;
+}
+
+.scriptName{
+color: #ffffffc0;
+}
+
+.SaveButton{
+  background-color: #2E2B3E;
+  border: 1px solid #ffffff6d;
+}
+
+
+.close{
+
+  background-color: #2E2B3E;
+
+}
+
+.scriptatt{
+  color:  #ffffff;;
+}
+
+.scriptCreateForm{
+  background-color: #2E2B3E;
+  border: 0.1px solid #ffffff6d;
+}
+
+.watcherpane-container{
+  height: 29%;
+}
