@@ -12,9 +12,15 @@
   <app-regular-item
   (click)="onCollapse()"
     IconName="arrow-left-circle-fill"
-  
+
     class="collapsedIcon"
   ></app-regular-item>
+  <!-- <div class="d-flex flex-row sideBarItem collapsedIcon" (click)="onCollapse()">
+
+    <div class="p-2"><i-bs name="arrow-left-circle-fill" width="20px" height="20px" class="col-6" > </i-bs></div>
+
+  </div> -->
+
   <app-regular-item
     Name="Home"
     IconName="house-fill"
@@ -40,18 +46,18 @@
     IconName="speedometer"
     routerLink="/logs"
   ></app-regular-item>
-  
+
   </div>
 <ng-template #elseBlock>
-  
+
 
   <div class="collapsedNavlist">
 
-    
+
     <div class="collapsedIcon2"(click)="onCollapse()">
       <i-bs name="arrow-right-circle-fill" width="20px" height="20px"> </i-bs>
     </div>
-   
+
     <div class="collapsedItem"></div>
 
     <div class="collapsedItem" routerLink="/home">
@@ -70,6 +76,6 @@
     <div class="collapsedItem" routerLink="/home">
       <i-bs name="speedometer" width="20px" height="20px"> </i-bs>
     </div>
-  
+
   </div>
 </ng-template>
