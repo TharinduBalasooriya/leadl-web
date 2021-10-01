@@ -12,7 +12,7 @@ export class RegularItemComponent implements OnInit {
   @Input()Name :string =''
   @Input()routerLink:string=''
   //@ts-ignore
-  @Input()IconName:string='house-fill'
+  @Input()IconName:IconNamesEnum|IconName='house-fill'
   ngOnInit(): void {
   }
 
